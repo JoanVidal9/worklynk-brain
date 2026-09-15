@@ -4,8 +4,8 @@ Vault de notas en Markdown con el contexto de toda la empresa: qué es
 WORKLYNK y cada uno de sus proyectos. Pensado para dos usos a la vez:
 
 1. **Tú, en Obsidian.** Abre esta carpeta (`C:\Users\joanv\code\worklynk-brain`)
-   como vault — *Open folder as vault* — y navega el grafo de enlaces como
-   siempre. Los `[[enlaces dobles]]` ya están escritos en formato Obsidian.
+   como vault — *Open folder as vault* — y navega el grafo como siempre. Los
+   enlaces entre notas ya están escritos con la doble corchete de Obsidian.
 2. **Cualquier sesión de Claude Code**, sea en el repo de la web, el de
    KERN, el del panel o donde sea. Al empezar una sesión nueva en
    cualquiera de esos repos, dile algo como: *"antes de nada, lee entera
