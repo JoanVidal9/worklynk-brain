@@ -1,7 +1,7 @@
 # Panel WorkLynk
 
 Panel de control interno de [[Empresa|WORKLYNK]]. Repo local:
-`C:\Users\joanv\code\PANEL WORKLYNK`. El detalle vivo está en `PRODUCT.md`,
+`C:\Users\joanv\code\worklynk\panel`. El detalle vivo está en `PRODUCT.md`,
 `DESIGN.md` y `README.md` de ese repo — esta nota es el resumen.
 
 ## Qué es

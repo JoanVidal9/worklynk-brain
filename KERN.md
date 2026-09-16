@@ -8,10 +8,11 @@ plantillas de Word de cada cliente.
 **En producción de verdad**: una ingeniería industrial española lo usa para
 ~20 documentos técnicos al mes. No es un prototipo.
 
-> Repo local previsto en `C:\Users\joanv\code\KERN`, pero está **vacío** —
-> el código de KERN no vive ahí todavía (o vive en otro sitio). Todo lo de
-> esta nota es lo que ya está prometido públicamente en [[Web worklynk.es]],
-> no una descripción del código.
+> Repo en `C:\Users\joanv\code\worklynk\kern` (GitHub:
+> `JoanVidal9/worklynk-engineeringos`) — ya no está vacío, tiene código real
+> (`index.html`, `SUPABASE.sql`, funciones Netlify). No se ha auditado su
+> contenido a fondo desde esta nota; si algo aquí choca con lo que hay en el
+> repo, manda el repo.
 
 ## Las seis fases (nombres reales, ya corregidos en la maqueta de la web)
 

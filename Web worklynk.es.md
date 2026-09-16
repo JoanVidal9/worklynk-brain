@@ -1,7 +1,7 @@
 # Web worklynk.es
 
 La web corporativa de [[Empresa|WORKLYNK]]. Repo local:
-`C:\Users\joanv\code\worklynk-web` (GitHub: `JoanVidal9/WORKLYNK`, privado).
+`C:\Users\joanv\code\worklynk\web` (GitHub: `JoanVidal9/WORKLYNK`, privado).
 
 Sitio estático generado con un script Python propio (sin framework). El
 detalle técnico completo y las convenciones de diseño/contenido están en
