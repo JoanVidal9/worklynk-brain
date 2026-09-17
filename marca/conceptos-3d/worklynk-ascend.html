@@ -1,0 +1,263 @@
+<title>WORKLYNK · Software a medida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#05060c; --ink:#f3f6ff; --muted:#9aa6c4; --muted-2:#6b7796;
+  --line:rgba(150,175,230,.12); --line-strong:rgba(150,175,230,.22);
+  --accent:#2bff66; --accent-2:#12c45a; --accent-ink:#05160c;
+  --glass:rgba(12,18,30,.55); --glass-2:rgba(16,22,38,.66);
+  --radius:18px; --radius-lg:26px; --maxw:1180px;
+  --shadow:0 30px 80px -30px rgba(0,0,0,.75);
+  --font:'Jost',ui-sans-serif,system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+/* fondo de fluido fijo, detrás de todo */
+.fluid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:var(--bg)}
+.fluid-bg canvas{display:block;width:100%;height:100%;opacity:.68}
+/* velo global: atenúa el fluido a fondo ambiente para que el texto se lea
+   en cualquier sección, más una viñeta suave en los bordes */
+.fluid-veil{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(5,6,12,.35), transparent 60%),
+    linear-gradient(180deg, rgba(5,6,12,.62), rgba(5,6,12,.72));}
+.page{position:relative;z-index:1}
+
+.section{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:clamp(80px,12vw,150px) 24px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.section-head{max-width:680px;margin:0 auto clamp(48px,6vw,72px);text-align:center}
+.section-head h2,.showcase-copy h2,.cta-card h2{font-size:clamp(30px,4.4vw,50px);font-weight:600;line-height:1.06;letter-spacing:-.02em;text-transform:uppercase;text-shadow:0 2px 40px rgba(0,0,0,.7)}
+.section-head p{margin-top:18px;color:var(--muted);font-size:18px;line-height:1.65;text-shadow:0 1px 24px rgba(0,0,0,.6)}
+
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:500;padding:13px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .18s ease,box-shadow .25s ease,background .2s ease,border-color .2s ease;white-space:nowrap}
+.btn svg{width:17px;height:17px}
+.btn-primary{color:var(--accent-ink);background:linear-gradient(180deg,var(--accent),var(--accent-2));box-shadow:0 10px 30px -8px rgba(43,255,102,.5),inset 0 1px 0 rgba(255,255,255,.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 38px -8px rgba(43,255,102,.65)}
+.btn-outline{color:var(--ink);background:rgba(255,255,255,.04);border-color:var(--line-strong);backdrop-filter:blur(10px)}
+.btn-outline:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.btn-ghost{color:var(--ink);background:rgba(255,255,255,.05);border-color:var(--line-strong);padding:9px 18px}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* reveals */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,.7,.2,1),transform .7s cubic-bezier(.22,.7,.2,1);transition-delay:var(--rd,0ms);will-change:opacity,transform}
+[data-reveal].in{opacity:1;transform:none}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+  background:radial-gradient(125% 62% at 50% -10%, rgba(5,6,12,.85) 0%, rgba(5,6,12,.3) 44%, transparent 68%)}
+.nav{max-width:var(--maxw);width:100%;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:inline-flex;align-items:center;gap:9px;font-weight:500;font-size:16px;letter-spacing:.1em}
+.brand svg{width:26px;height:auto}
+.brand i{font-style:normal;font-weight:400;color:var(--muted)}
+.brand b{font-weight:700}
+.nav-links{display:flex;gap:30px}
+.nav-links a{font-size:14.5px;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.hero-inner{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;transform:translateY(-6vh)}
+.hero-title{font-size:clamp(34px,6vw,66px);font-weight:600;line-height:1.02;letter-spacing:-.03em;max-width:16ch;text-transform:uppercase;text-shadow:0 2px 50px rgba(0,0,0,.6)}
+.hero-title em{font-style:normal;background:linear-gradient(180deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{margin-top:24px;max-width:560px;font-size:clamp(16px,2vw,19px);line-height:1.6;color:var(--muted);font-weight:400;text-shadow:0 1px 24px rgba(0,0,0,.6)}
+.hero-actions{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.strip{padding:0 24px clamp(36px,6vw,60px);text-align:center}
+.strip-label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2)}
+.strip-row{margin-top:16px;display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(18px,4vw,44px)}
+.strip-row span{font-size:15px;font-weight:500;color:var(--muted-2);transition:color .2s}
+.strip-row span:hover{color:var(--ink)}
+
+/* features */
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;padding:30px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);overflow:hidden;transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 0% 0%, rgba(43,255,102,.09), transparent 45%);opacity:0;transition:opacity .3s ease;pointer-events:none}
+.card:hover{transform:translateY(-4px);border-color:var(--line-strong);background:var(--glass-2)}
+.card:hover::before{opacity:1}
+.card-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:12px;color:var(--accent);background:rgba(43,255,102,.1);border:1px solid rgba(43,255,102,.2);margin-bottom:18px}
+.card-icon svg{width:22px;height:22px}
+.card h3{font-size:19px;font-weight:600;margin-bottom:9px}
+.card p{font-size:15px;line-height:1.6;color:var(--muted)}
+
+/* showcase */
+.showcase-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,6vw,68px);align-items:center}
+.showcase-copy .eyebrow{margin-bottom:14px}
+.showcase-copy p{margin-top:18px;color:var(--muted);font-size:17px;line-height:1.65}
+.showcase-copy .btn{margin-top:28px}
+.dashboard{position:relative;padding:24px;border-radius:var(--radius-lg);background:var(--glass-2);border:1px solid var(--line-strong);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+.dash-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.dash-top h4{font-size:15px;font-weight:600;letter-spacing:.02em}
+.dash-live{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--accent)}
+.dash-live i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
+.dash-bars{display:flex;align-items:flex-end;gap:10px;height:150px;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:14px;padding:14px}
+.dash-bar{flex:1;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,var(--accent),rgba(18,196,90,.25));transform-origin:bottom}
+.dash-rows{margin-top:16px;display:flex;flex-direction:column;gap:14px}
+.dash-row{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;font-size:13.5px;color:var(--muted)}
+.dash-track{height:8px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
+.dash-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent-2),var(--accent))}
+
+/* stats */
+.stats{margin-top:clamp(56px,8vw,90px);display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{text-align:center;padding:30px 18px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(12px)}
+.stat-value{font-size:clamp(30px,4vw,44px);font-weight:700;line-height:1;background:linear-gradient(180deg,#fff,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-label{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.4}
+
+/* cta + footer */
+.cta-card{max-width:760px;margin:0 auto;text-align:center;padding:clamp(48px,7vw,78px) clamp(28px,5vw,60px);border-radius:var(--radius-lg);background:radial-gradient(120% 140% at 50% 0%, rgba(43,255,102,.12), transparent 55%), var(--glass-2);border:1px solid var(--line-strong);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+.cta-card p{margin-top:16px;color:var(--muted);font-size:17px;line-height:1.6}
+.cta-card .hero-actions{margin-top:32px}
+.footer{max-width:var(--maxw);margin:clamp(64px,9vw,100px) auto 0;padding:48px 24px 0;display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;border-top:1px solid var(--line)}
+.footer-brand{max-width:280px}
+.footer-brand p{margin-top:12px;color:var(--muted);font-size:14px;line-height:1.6}
+.footer-cols{display:flex;gap:56px;flex-wrap:wrap}
+.footer-col h5{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:14px}
+.footer-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:9px;transition:color .2s}
+.footer-col a:hover{color:var(--ink)}
+.copyright{max-width:var(--maxw);margin:0 auto;text-align:center;padding:48px 24px 40px;font-size:13px;color:var(--muted-2)}
+
+@media(max-width:980px){
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .showcase-grid{grid-template-columns:1fr;text-align:center}
+  .showcase-copy .btn{margin-inline:auto}
+  .stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .nav{padding:18px 20px}
+  .section{padding:clamp(64px,16vw,110px) 20px}
+}
+@media(max-width:560px){
+  .feature-grid{grid-template-columns:1fr}
+  .dash-row{grid-template-columns:96px 1fr}
+  .hero-actions .btn{flex:1}
+  .footer{flex-direction:column}
+}
+@media(max-width:380px){ .stats{grid-template-columns:1fr} }
+@media(prefers-reduced-motion:reduce){
+  [data-reveal]{opacity:1;transform:none;transition:none}
+}
+</style>
+
+<div class="fluid-bg" data-hero-net aria-hidden="true"></div>
+<div class="fluid-veil" aria-hidden="true"></div>
+
+<div class="page">
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#top"><svg viewBox="-1 -1 292 165" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="22" stroke-linejoin="round"><rect x="24.5" y="24.5" width="114" height="114" rx="24" transform="rotate(45 81.5 81.5)"/><rect x="151.5" y="24.5" width="114" height="114" rx="24" transform="rotate(45 208.5 81.5)"/></g><path d="M145 53 197 53 145 106 93 106Z" fill="#2bff66"/></svg><span><i>WORK</i><b>LYNK</b></span></a>
+      <div class="nav-links">
+        <a href="#que-hacemos">Qué hacemos</a>
+        <a href="#kern">KERN</a>
+        <a href="#reformalo">Refórmalo</a>
+        <a href="#estudio">Estudio</a>
+      </div>
+      <a class="btn btn-ghost" href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="hero-inner">
+      <h1 class="hero-title" data-reveal style="--rd:60ms">Software <em>a medida</em></h1>
+      <p class="hero-sub" data-reveal style="--rd:180ms">Construimos lo que tu negocio necesita. Enlazamos las herramientas, los datos y los procesos que hoy funcionan por separado.</p>
+      <div class="hero-actions" data-reveal style="--rd:300ms">
+        <a class="btn btn-primary" href="#contacto">Cuéntanos tu caso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-outline" href="#que-hacemos">Ver qué hacemos</a>
+      </div>
+    </div>
+
+    <div class="strip" data-reveal style="--rd:420ms">
+      <div class="strip-label">Lo que construimos</div>
+      <div class="strip-row">
+        <span>Herramientas internas</span><span>Automatizaciones</span><span>Webs a medida</span><span>Integraciones</span><span>Documentación técnica</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="que-hacemos">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal>Qué hacemos</span>
+      <h2 data-reveal style="--rd:80ms">Software que se adapta a ti, no al revés</h2>
+      <p data-reveal style="--rd:160ms">Si algo no se compra hecho, lo hacemos. Herramientas pensadas alrededor de tus procesos, no de una plantilla genérica.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="card" data-reveal style="--rd:0ms"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M6 9v3a3 3 0 0 0 3 3h3"/></svg></div><h3>Software a medida</h3><p>Herramientas internas construidas para una sola empresa: la tuya. Nada de módulos que sobran.</p></div>
+      <div class="card" data-reveal style="--rd:90ms"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></div><h3>Automatizaciones</h3><p>Quitamos de en medio las tareas repetitivas que hoy se hacen a mano, una por una.</p></div>
+      <div class="card" data-reveal style="--rd:180ms"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-4"/><path d="M13 16V8"/><path d="M18 16v-7"/></svg></div><h3>KERN</h3><p>Nuestro producto, en producción: convierte el archivo documental de una empresa en expedientes técnicos.</p></div>
+      <div class="card" data-reveal style="--rd:0ms"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m2 8 10-5 10 5-10 5Z"/><path d="M4 11v5l8 4 8-4v-5"/></svg></div><h3>Refórmalo</h3><p>Producto propio y publicado: una habitación reformada a partir de una sola foto.</p></div>
+      <div class="card" data-reveal style="--rd:90ms"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg></div><h3>Integraciones</h3><p>Enlazamos los sistemas que hoy no se hablan entre sí, para que funcionen como uno.</p></div>
+      <div class="card" data-reveal style="--rd:180ms"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Es tuyo</h3><p>En un desarrollo a medida, el código y los datos son del cliente. Queda por escrito antes de empezar.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="kern">
+    <div class="showcase-grid">
+      <div class="showcase-copy">
+        <span class="eyebrow" data-reveal>En producción de verdad</span>
+        <h2 data-reveal style="--rd:90ms">KERN, funcionando hoy</h2>
+        <p data-reveal style="--rd:180ms">Una ingeniería industrial española lo usa para generar unos veinte documentos técnicos al mes. No es un prototipo: convierte su propio archivo documental en expedientes, sobre sus plantillas.</p>
+        <a class="btn btn-primary" href="#contacto" data-reveal style="--rd:270ms">Pídenos una demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="dashboard" data-reveal style="--rd:160ms">
+        <div class="dash-top"><h4>Expediente · seis fases</h4><span class="dash-live"><i></i>Ilustrativo</span></div>
+        <div class="dash-bars">
+          <div class="dash-bar" style="height:62%"></div><div class="dash-bar" style="height:88%"></div><div class="dash-bar" style="height:47%"></div><div class="dash-bar" style="height:95%"></div><div class="dash-bar" style="height:71%"></div><div class="dash-bar" style="height:80%"></div>
+        </div>
+        <div class="dash-rows">
+          <div class="dash-row"><span>Comprensión</span><div class="dash-track"><div class="dash-fill" style="width:100%"></div></div></div>
+          <div class="dash-row"><span>Conocimiento</span><div class="dash-track"><div class="dash-fill" style="width:82%"></div></div></div>
+          <div class="dash-row"><span>Datos · Plan</span><div class="dash-track"><div class="dash-fill" style="width:64%"></div></div></div>
+          <div class="dash-row"><span>Ejecución · Expediente</span><div class="dash-track"><div class="dash-fill" style="width:40%"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat" data-reveal style="--rd:0ms"><div class="stat-value">~20</div><div class="stat-label">documentos técnicos al mes con KERN, en producción</div></div>
+      <div class="stat" data-reveal style="--rd:80ms"><div class="stat-value">1</div><div class="stat-label">producto propio publicado y abierto (Refórmalo)</div></div>
+      <div class="stat" data-reveal style="--rd:160ms"><div class="stat-value">100%</div><div class="stat-label">del código y los datos, tuyos por contrato</div></div>
+      <div class="stat" data-reveal style="--rd:240ms"><div class="stat-value">0</div><div class="stat-label">dependencias de terceros ni rastreo en esta web</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="cta-card">
+      <span class="eyebrow" data-reveal>¿Hablamos?</span>
+      <h2 data-reveal style="--rd:140ms">Cuéntanos qué necesita tu negocio</h2>
+      <p data-reveal style="--rd:220ms">Sin compromiso. Te decimos qué se puede hacer, qué no, y por qué. Detrás hay una persona con nombre y apellidos, en remoto desde España.</p>
+      <div class="hero-actions" data-reveal style="--rd:300ms">
+        <a class="btn btn-primary" href="mailto:administracion@worklynk.es">Cuéntanos tu caso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-outline" href="mailto:soporte@worklynk.es">Soporte</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <a class="brand" href="#top"><svg viewBox="-1 -1 292 165" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="22" stroke-linejoin="round"><rect x="24.5" y="24.5" width="114" height="114" rx="24" transform="rotate(45 81.5 81.5)"/><rect x="151.5" y="24.5" width="114" height="114" rx="24" transform="rotate(45 208.5 81.5)"/></g><path d="M145 53 197 53 145 106 93 106Z" fill="#2bff66"/></svg><span><i>WORK</i><b>LYNK</b></span></a>
+        <p>Estudio de software a medida, en remoto desde España.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h5>Productos</h5><a href="#kern">KERN</a><a href="#reformalo">Refórmalo</a><a href="#que-hacemos">Software a medida</a></div>
+        <div class="footer-col"><h5>Estudio</h5><a href="#">Casos</a><a href="#">Proceso</a><a href="#">Estudio</a></div>
+        <div class="footer-col"><h5>Legal</h5><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a></div>
+      </div>
+    </footer>
+    <div class="copyright">© 2026 WORKLYNK — software a medida.</div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(n){ n.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold:0.18, rootMargin:'0px 0px -8% 0px' });
+  items.forEach(function(n){ io.observe(n); });
+})();
+</script>
+<script src="hero3d.js"></script>

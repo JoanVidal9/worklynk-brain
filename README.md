@@ -26,6 +26,8 @@ cualquier nota.
 - [[KERN]] — el producto insignia (`C:\Users\joanv\code\worklynk\kern`)
 - [[Refórmalo]] — el producto propio
 - [[Panel WorkLynk]] — el panel de control interno (`C:\Users\joanv\code\worklynk\panel`)
+- [Marca](marca/MARCA.md) — kit de marca: logo, colores, tipografías, imagen
+  social y material visual (carpeta `marca/`)
 
 ## Dónde vive todo
 
