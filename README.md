@@ -1,73 +1,27 @@
 # Cerebro WORKLYNK
 
-Vault de notas en Markdown con el contexto de toda la empresa: qué es
-WORKLYNK y cada uno de sus proyectos. Pensado para dos usos a la vez:
+Baúl compartido de Obsidian en `C:\Users\joanv\code\worklynk\brain`. Codex y Claude Code consultan los mismos archivos Markdown. Entrada: [START-HERE.md](START-HERE.md).
 
-1. **Tú, en Obsidian.** Abre esta carpeta (`C:\Users\joanv\code\worklynk\brain`)
-   como vault — *Open folder as vault* — y navega el grafo como siempre. Los
-   enlaces entre notas ya están escritos con la doble corchete de Obsidian.
-2. **Cualquier sesión de Claude Code**, sea en el repo de la web, el de
-   KERN, el del panel o donde sea. Al empezar una sesión nueva en
-   cualquiera de esos repos, dile algo como: *"antes de nada, lee entera
-   la carpeta C:\Users\joanv\code\worklynk\brain"* — así arranca con el
-   contexto de toda la empresa sin tener que releer código desde cero.
-   Esto es lo que de verdad reduce cuánto gasto: notas cortas y curadas en
-   vez de que cada sesión nueva tenga que explorar el código para
-   reconstruir el contexto.
+## Organización
 
-No es una herramienta instalada ni un servicio corriendo: son archivos de
-texto normales, en git, que puedes leer, editar y enlazar a mano igual que
-cualquier nota.
+La carpeta `C:\Users\joanv\code\worklynk` contiene cuatro repositorios independientes: `brain`, `panel`, `web` y `kern`. Panel, Web y KERN conservan cada uno su despliegue Netlify. Brain conserva documentación y no necesita despliegue.
 
-## Notas
+- [START-HERE.md](START-HERE.md): lectura mínima y rutas.
+- [OPERATIVA.md](OPERATIVA.md): reparto, consumo de contexto y actualización obligatoria al cerrar cada tarea.
+- [Handoffs.md](Handoffs.md): último estado por proyecto.
+- [Tareas/INDEX.md](Tareas/INDEX.md): trabajo activo y fichas.
+- [[Empresa]], [[Panel WorkLynk]], [[Web worklynk.es]], [[KERN]] y [[Refórmalo]]: contexto duradero.
+- [Marca](marca/MARCA.md): recursos existentes de identidad.
+- AGENTS.md y CLAUDE.md: instrucciones de entrada al trabajar en este repositorio.
 
-- [[Empresa]] — qué es WORKLYNK, posicionamiento, tono, estado del negocio
-- [[Web worklynk.es]] — la web corporativa (`C:\Users\joanv\code\worklynk\web`)
-- [[KERN]] — el producto insignia (`C:\Users\joanv\code\worklynk\kern`)
-- [[Refórmalo]] — el producto propio
-- [[Panel WorkLynk]] — el panel de control interno (`C:\Users\joanv\code\worklynk\panel`)
-- [Marca](marca/MARCA.md) — kit de marca: logo, colores, tipografías, imagen
-  social y material visual (carpeta `marca/`)
+## Memoria al día
 
-## Dónde vive todo
+El agente responsable actualiza la tarea, el relevo y las notas afectadas antes de cerrar su sesión, sin esperar otra petición de Joan. No se copian conversaciones completas ni se carga todo el baúl por defecto. Las discrepancias técnicas se verifican en el repositorio correspondiente.
 
-Todo el código de la empresa cuelga de `C:\Users\joanv\code\worklynk\`:
-`web`, `brain` (este vault), `kern` y `panel`, cada uno su propio repo git
-con su remoto en GitHub (salvo este vault, que es privado). Hay un acceso
-directo por proyecto en el escritorio (`WORKLYNK - Web`, `WORKLYNK - Brain`,
-`WORKLYNK - KERN`, `WORKLYNK - Panel`).
+Esta es una disciplina de trabajo, no un servicio en segundo plano. Los cambios hechos fuera de las sesiones no se detectan solos. No existe todavía un coordinador que active automáticamente a Codex o Claude.
 
-## Cómo mantenerlo vivo
+## Obsidian y Git
 
-Esto no se actualiza solo. Cuando algo cambie de verdad en un proyecto (no
-cada detalle — solo lo que le cambiaría el contexto a alguien que no ha
-visto el código), pide que se actualice la nota correspondiente desde la
-sesión de ese proyecto.
+Abrir esta carpeta como baúl en Obsidian. Su configuración local `.obsidian/` está ignorada en Git. Las instrucciones globales de ambos agentes ya apuntan al índice en este ordenador; otros equipos necesitan configurar su ruta de entrada.
 
-Cada repo sigue teniendo su propio `CLAUDE.md`/`README.md` con el detalle
-técnico de trabajar en él; esto es el resumen de una capa por encima, para
-no tener que leerlo todo cada vez que se abre una sesión nueva.
-
-## Por qué esto y no un "claude-mem" o similar
-
-Existen varios plugins de terceros (`claude-mem` y clones parecidos) que
-prometen memoria automática entre sesiones de Claude Code. Se descartan
-por dos motivos: (1) el ecosistema está lleno de forks con nombres casi
-idénticos y trazabilidad dudosa — el mismo patrón que ya se vio con
-"Graphify" — y (2) el propio Claude Code ya trae un sistema de memoria
-nativo (archivos en `~/.claude/.../memory/`) que hace lo mismo gratis y sin
-instalar nada; además herramientas como `claude-mem` suelen gastar
-llamadas extra a la API para comprimir el contexto, lo contrario de
-"gastar lo menos posible". Este vault + la memoria nativa + un
-`CLAUDE.md` conciso por repo ya cubre el objetivo.
-
-## Por qué esto y no "Graphify"
-
-Buscando el nombre, resultó que "Graphify" no es una sola herramienta: hay
-al menos tres proyectos sin relación con ese nombre, y una variante
-(`graphifyy`, con doble "y", promocionada con cifras infladas) con toda la
-pinta de intentar hacerse pasar por un paquete legítimo. Instalar algo así
-significa ejecutar código de terceros en el ordenador — no vale la pena el
-riesgo cuando esto (una carpeta de notas, cero instalación) resuelve lo
-mismo que pedías: un sitio donde esté todo el contexto sin releer código
-cada vez.
+El remoto del Brain es `JoanVidal9/worklynk-brain`. Guardar un archivo local no equivale a publicarlo: commit y push son pasos separados. Nunca incluir credenciales, datos privados de clientes ni logs completos.

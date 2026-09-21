@@ -30,11 +30,17 @@ API de OpenAI).
 - **Cliente**: portal restringido, solo sus proyectos y facturas vinculados
   (aplicado con políticas RLS de Supabase, no solo en la interfaz).
 
+## Navegación espacial — 2026-09-21
+
+Joan pide que el Command Center sea el entorno global de administración, sin menús convencionales. Primera versión: escena WebGL permanente, siete estaciones (Resumen, Clientes, Proyectos, Facturas, Agentes, Tareas y Actividad), órbita y zoom, desplazamiento de cámara al seleccionar un área y retorno a la vista general. Los datos y formularios existentes se abren en un área legible sobre la escena; todavía no son objetos editables dentro del espacio 3D.
+
+Implementación en `src/components/SpatialLayout.tsx`, `src/three/command-center/SpatialCanvas.tsx`, `destinations.ts` y `src/spatial.css`. La vista de desarrollo `/preview/command-center` no consulta datos de empresa ni activa agentes. El portal de clientes conserva el shell restringido anterior. La iteración 0c480a4 conserva el encuadre de exploración al regresar, suaviza cámara y zoom, mejora materiales y sombras y ancla el dock al borde derecho para dejar visible la estación. La siguiente iteración sustituye las formas genéricas por modelos e iconos semánticos y añade en el dock un selector contextual de las siete áreas.
+
+La pantalla Agentes muestra una red de ocho roles y consulta la Function para distinguir conexiones reales, servicio apagado y configuración sin confirmar. El código actual solo define ejecutores de servidor para Operaciones e Ingeniería; Finanzas, Comercial, Marketing, Investigación y Soporte se mantienen visibles como pendientes hasta disponer de ejecutores propios. No se deben mostrar como activos por diseño.
+
 ## Identidad visual
 
-Sigue el mismo criterio que [[Web worklynk.es]]: blanco y negro mandan,
-magenta de marca y una luz violeta cercana solo en navegación activa, foco y
-estados relevantes — nunca verde. Tema según preferencia del sistema.
+El entorno de administración extiende la identidad ya existente del Command Center: grafito, cristal ahumado, luz blanca y ámbar. Escena oscura con geometría arquitectónica y etiquetas legibles. Las superficies heredadas fuera del shell espacial conservan su sistema anterior de blanco/negro y magenta. No usar verde. Consultar DESIGN.md y el brief espacial del repo para el alcance exacto.
 
 ## Principios del producto
 
