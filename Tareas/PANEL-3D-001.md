@@ -36,3 +36,9 @@
 - Persistencia: `202609220012_social_agent.sql` amplía las funciones SQL para que Redes Sociales pueda recibir una segunda llamada de planificación y aprobar sus tareas. Aplicar 011 y 012 en ese orden; hasta entonces la pantalla no debe interpretarse como conexión real en producción.
 - Validación: `npm run build` y 25 pruebas correctas; lint sin errores, con cinco avisos previos fuera de este cambio. Detector de interfaz sin bloqueos, con avisos de tokens ya existentes. No se comprobó la página autenticada ni se aplicó SQL remoto.
 - Próximo trabajo: diseñar e implementar espacios de trabajo persistentes y su biblioteca de entregas (imágenes, documentos y artefactos por petición). No afirmar que ese archivo existe hasta contar con migración, RLS, UI y prueba autenticada.
+
+## Corrección de autenticación de agentes
+- Joan reporta que la red queda “sin confirmar” y recibe repetidamente el mensaje de sesión caducada pese a volver a iniciar sesión.
+- Publicado en `ba19252a9bcf3a2c36fc971b2a13e4aa4a7ba9d0`: el cliente renueva una sesión próxima a expirar antes de llamar a la Function; el servidor detecta una API key inválida como configuración de servidor; el frontend diferencia una sesión local expirada del rechazo de un token por la Function.
+- Validación: build y 25 pruebas correctas. Aún no hay acceso autenticado al despliegue ni a los secretos de Netlify para confirmar el origen remoto.
+- Si persiste después del deploy, revisar en Netlify que `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` son del mismo proyecto Supabase que `VITE_SUPABASE_URL`; una configuración cruzada hace que toda sesión sea rechazada y deja todos los agentes sin confirmar.
