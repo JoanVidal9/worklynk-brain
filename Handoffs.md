@@ -21,12 +21,10 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 
 ## Web worklynk.es — 2026-09-22
 
-- Responsable: Codex por petición directa de Joan. Ruta: `C:\Users\joanv\code\worklynk\web`.
-- Ficha: [WEB-DESIGN-001](Tareas/WEB-DESIGN-001.md).
-- Publicado en GitHub `main`: `a894bda`, rediseño completo inspirado en la claridad editorial de Apple, con navegación Liquid Glass, tipografía Jost de caja natural, escenas de producto asimétricas y tres imágenes originales con procedencia embebida.
-- La portada usa fotografía conceptual; las páginas interiores conservan el fondo WebGL. KERN se identifica como maqueta con datos de ejemplo y Refórmalo como visualización conceptual.
-- Validación: generación de 16 páginas, 32 recorridos en Chrome (escritorio y móvil), cero desbordamientos, errores de página, imágenes fallidas o rutas con `h1` incorrecto; cero referencias estáticas ausentes. Revisión visual final: `ship`, sin regresiones en los seis cambios revisados.
-- Despliegue verificado en `https://worklynk.es/`: respuesta HTTP 200 y el nuevo hero ya servido. Pendiente únicamente sustituir las escenas conceptuales por material real cuando exista.
+- Corrección publicada: 5b355ac. Joan rechazó el diseño oscuro anterior y los cambios de copy.
+- Todos los textos originales de 7913081 restaurados y protegidos. Diseño blanco/gris perla, tipografía Apple de sistema, Liquid Glass funcional y fondo común en todas las rutas.
+- Validación: 16 comparaciones de texto y 32 recorridos escritorio/móvil correctos. Menú móvil accesible; claro por defecto con elección persistente.
+- Ficha: [WEB-DESIGN-001](Tareas/WEB-DESIGN-001.md). Brain actualizado localmente; no implica sincronización remota.
 
 ## Coordinación — 2026-09-21
 
@@ -40,3 +38,4 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 
 - Joan confirma repositorio y despliegue propios en Netlify.
 - Sin tarea de implementación asignada en esta conversación.
+

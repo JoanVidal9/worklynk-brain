@@ -14,27 +14,14 @@ que abrirlo.
   HTML final. Se compila con `python3 build.py` y la salida **sí se
   versiona** en git (Netlify publica tal cual, sin paso de build).
 - Desplegada en Netlify, dominio `worklynk.es` ya conectado.
-- Dirección visual «Optical Workspace»: tipografía Jost autoalojada, fondos
-  carbón y blanco mineral, jerarquía editorial amplia y señal verde reservada
-  a conexión, foco y estado. La navegación, menús y controles usan Liquid
-  Glass; el contenido largo permanece sobre superficies sólidas. Tema oscuro
-  por defecto y tema claro persistente.
-- `PRODUCT.md`, `DESIGN.md` y `.impeccable/design.json` contienen la verdad de
-  producto y el sistema visual. No hace falta reconstruirlo desde el chat.
-- La portada usa `assets/images/worklynk-glass-links.png`; KERN y Refórmalo
-  incorporan escenas conceptuales propias. Cada PNG conserva su prompt
-  embebido y un `.prompt.txt` contiguo.
+- Dirección vigente: blanco/gris perla, tipografía de sistema estilo Apple, vidrio funcional en navegación, menús y controles; mismo fondo y eslabones claros en todas las cabeceras.
+- Claro por defecto; elección posterior en wl-theme-light-v2. Textos originales de 7913081 protegidos por instrucción expresa de Joan.
+- Documentación: PRODUCT.md, DESIGN.md y .impeccable/design.json.
 
 ## Última publicación
 
-- Commit `a894bda` en `main`, 2026-09-22.
-- Rediseño Apple-inspired sin copiar una página concreta: tipografía de caja
-  natural, titulares de escala variable, composiciones asimétricas, imágenes a
-  gran formato y vidrio funcional.
-- Generación correcta de 16 páginas; 32 comprobaciones en Chrome entre
-  escritorio y móvil sin errores, desbordamientos ni imágenes rotas.
-- Netlify publica directamente desde el repositorio. El dominio respondió HTTP
-  200 con el nuevo hero tras el push; despliegue confirmado.
+- 5b355ac en main, 2026-09-22. Sustituye el diseño rechazado a894bda.
+- Textos restaurados; 16 comparaciones de copy y 32 comprobaciones de escritorio/móvil sin fallos.
 
 ## Contenido — páginas
 
@@ -59,3 +46,4 @@ proporcional a la licencia. Catálogo público actual: Actas de reunión,
 Resumen de documentos, Extracción de datos, Redacción de correspondencia,
 Buscador documental. Ver [[KERN]] para el detalle completo que ya se le
 pasó a esa sesión.
+
