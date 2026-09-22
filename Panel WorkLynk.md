@@ -36,7 +36,7 @@ Joan pide que el Command Center sea el entorno global de administración, sin me
 
 Implementación en `src/components/SpatialLayout.tsx`, `src/three/command-center/SpatialCanvas.tsx`, `destinations.ts` y `src/spatial.css`. La vista de desarrollo `/preview/command-center` no consulta datos de empresa ni activa agentes. El portal de clientes conserva el shell restringido anterior. La iteración 0c480a4 conserva el encuadre de exploración al regresar, suaviza cámara y zoom, mejora materiales y sombras y ancla el dock al borde derecho para dejar visible la estación. La siguiente iteración sustituye las formas genéricas por modelos e iconos semánticos y añade en el dock un selector contextual de las siete áreas.
 
-La pantalla Agentes muestra una red de ocho roles y consulta la Function para distinguir conexiones reales, servicio apagado y configuración sin confirmar. El código actual solo define ejecutores de servidor para Operaciones e Ingeniería; Finanzas, Comercial, Marketing, Investigación y Soporte se mantienen visibles como pendientes hasta disponer de ejecutores propios. No se deben mostrar como activos por diseño.
+La pantalla Agentes muestra una red de ocho roles y consulta la Function para distinguir conexiones reales, servicio apagado y configuración sin confirmar. Desde `9f64cc2`, Operaciones, Ingeniería, Finanzas, Comercial, Marketing, Investigación y Soporte tienen ejecutores de planificación acotados; la migración `202609220011_specialist_executors.sql` es necesaria para anunciarlos en producción. Todos siguen bajo aprobación explícita y no ejecutan acciones externas. No se deben mostrar como activos hasta que esa comprobación real confirme la Function.
 
 ## Identidad visual
 

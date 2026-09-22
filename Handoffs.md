@@ -11,7 +11,7 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - Navegación: siete estaciones 3D, cámara, zoom y retorno; páginas existentes en un área de trabajo sobre la escena. Portal de clientes restringido conservado.
 - Validación: compilación y 23 pruebas; recorrido de las siete áreas en vista previa sin datos reales. Validación autenticada pendiente.
 - Publicado en GitHub main: 0c480a4, mejora de fluidez e interfaz. Cámara y zoom animados, memoria del encuadre, sombras estáticas y dock integrado. Revisión visual ship; build y 23 pruebas OK. Joan confirmó la primera versión en Netlify; nuevo despliegue pendiente de verificar. Brain actualizado localmente.
-- Publicado en GitHub main: 393b554, estaciones semánticas con iconos, selector contextual del dock y red de agentes que declara el estado real. El código solo puede ejecutar Operaciones e Ingeniería; los otros cinco especialistas están definidos en la interfaz pero pendientes de ejecutores de servidor. Build, 23 pruebas y recorrido de escritorio/móvil correctos; comprobación autenticada pendiente.
+- Publicado en GitHub main: 9f64cc2, estaciones semánticas con iconos, selector contextual del dock y red de agentes. Los siete especialistas ya tienen ejecutor de planificación acotado; la migración 011 debe aplicarse en Supabase para que la Function los anuncie como conectados. Cada petición usa una llamada del CEO y, solo si se delega, una segunda del especialista; no ejecutan acciones externas. Build, 24 pruebas y recorrido de escritorio/móvil correctos; comprobación autenticada pendiente.
 - Siguiente paso: Joan revisa la versión visual. Antes de continuar, leer la ficha; no reconstruir el chat completo.
 
 ## Coordinación — 2026-09-21
