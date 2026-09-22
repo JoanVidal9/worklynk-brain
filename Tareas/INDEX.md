@@ -5,7 +5,7 @@ Actualizar esta tabla junto con la ficha de cada tarea. No cargar todas las fich
 | ID | Proyecto | Responsable | Estado | Siguiente paso |
 | --- | --- | --- | --- | --- |
 | [COORD-001](COORD-001.md) | Brain | Codex; validación posterior con Claude | Preparación local terminada; integración sin validar | Validar lectura de Claude cuando tenga cuota; concretar coordinador |
-| [PANEL-3D-001](PANEL-3D-001.md) | Panel | Codex | Consejo de dirección, Equipo y superficies de cristal publicados | Validar propuesta autenticada, aplicar migraciones 011/012 y construir biblioteca de entregas |
+| [PANEL-3D-001](PANEL-3D-001.md) | Panel | Codex | Menús espaciales y edición de Proyectos terminados; Agentes y Consejo publicados | Validar edición en Netlify, aplicar migraciones 011/012 y construir biblioteca de entregas |
 
 Joan autorizó el relevo del trabajo de navegación del Panel a Codex. Cualquier otro trabajo suspendido de Claude sigue pendiente de documentar.
 

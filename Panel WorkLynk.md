@@ -46,7 +46,11 @@ Desde `b044a4f`, la consola de Agentes no se expone antes de verificar la Functi
 
 ## Identidad visual
 
-El entorno de administración extiende la identidad ya existente del Command Center: grafito, cristal ahumado, luz blanca y ámbar. Escena oscura con geometría arquitectónica y etiquetas legibles. Las superficies heredadas fuera del shell espacial conservan su sistema anterior de blanco/negro y magenta. No usar verde. Consultar DESIGN.md y el brief espacial del repo para el alcance exacto.
+El entorno de administración conserva la escena 3D del Command Center y usa una interfaz espacial azul-negra: cristal frío para el volumen principal, foco hielo, señal violeta secundaria y un lanzador contextual con las siete áreas. En escritorio el lanzador es vertical; en móvil es horizontal y muestra que hay más destinos. Las superficies de datos permanecen más sólidas para sostener la lectura. El portal cliente conserva su sistema anterior de blanco/negro y magenta. No usar verde. Consultar DESIGN.md y el brief espacial del repo para el alcance exacto.
+
+## Proyectos editables — 2026-09-22
+
+La pantalla Proyectos admite edición completa de registros existentes y cambio de estado directo desde cada tarjeta. El editor cubre cliente, nombre, descripción, estado, presupuesto, inicio y entrega; las actualizaciones usan las políticas RLS existentes (`projects: admin all`) y las vistas de cliente siguen siendo de solo lectura. Existe una ruta sólo de desarrollo con datos locales rotulados como muestra para revisar tarjetas, estados y diálogo sin usar una sesión ni información real; no entra en producción.
 
 ## Principios del producto
 

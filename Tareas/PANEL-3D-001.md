@@ -54,3 +54,10 @@
 - Publicado en `b044a4f7f6ec754037c97904f3cb16907342d8ab`: mientras el GET de estado verifica Function y sesión se muestra una pantalla aislada; si falla, se presenta un estado de conexión con reintento y el detalle técnico plegado. Ese GET usa un timeout de 12 segundos; las peticiones al modelo mantienen 55 segundos.
 - Estilo: superficies de Agentes con `rgba` blanco, blur de 18–20px, borde semitransparente, sombras suaves, reflejo interior y líneas de luz superior/lateral. La consola no aparece hasta que el estado sea válido.
 - Validación: build y 25 pruebas correctas; lint sin errores con los cinco avisos existentes fuera de Agentes. La comprobación visual autenticada sigue pendiente.
+
+## Menús espaciales y edición de Proyectos
+- Joan informa de que los proyectos creados no podían editarse ni cambiar de estado y sustituye la petición de glassmorphism general por menús espaciales inspirados en Apple VR, integrados en el panel 3D.
+- Proyectos: edición completa mediante diálogo, cambio de estado inmediato desde la tarjeta, búsqueda/filtros, feedback de guardado, errores recuperables, skeletons y controles táctiles de 44px. Los clientes conservan lectura sin controles administrativos.
+- Interfaz: volumen frontal azul-negro con material translúcido jerárquico, foco hielo y señal violeta; lanzador vertical en escritorio y horizontal con indicación “Más” en móvil. La escena Three.js y sus estaciones continúan visibles alrededor.
+- Accesibilidad: foco visible, movimiento reducido, transparencia reducida y contraste aumentado. La ruta DEV `/preview/command-center/projects/fixture` usa datos locales rotulados como muestra y permite comprobar tarjetas, estados y editor sin consultar Supabase; se excluye de producción.
+- Verificación: `npm run build`, 25 pruebas y lint sin errores; cinco avisos anteriores fuera del cambio. Capturas 1440×1000 y 390×844, editor poblado y revisión Impeccable final `ship`. Validación con sesión administradora real pendiente tras el despliegue.
