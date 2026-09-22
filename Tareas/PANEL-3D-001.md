@@ -42,3 +42,9 @@
 - Publicado en `ba19252a9bcf3a2c36fc971b2a13e4aa4a7ba9d0`: el cliente renueva una sesión próxima a expirar antes de llamar a la Function; el servidor detecta una API key inválida como configuración de servidor; el frontend diferencia una sesión local expirada del rechazo de un token por la Function.
 - Validación: build y 25 pruebas correctas. Aún no hay acceso autenticado al despliegue ni a los secretos de Netlify para confirmar el origen remoto.
 - Si persiste después del deploy, revisar en Netlify que `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` son del mismo proyecto Supabase que `VITE_SUPABASE_URL`; una configuración cruzada hace que toda sesión sea rechazada y deja todos los agentes sin confirmar.
+
+## Consejo de dirección y cristal
+- Joan confirma que los agentes ya conectan, pero solicita propuestas del equipo y no sólo un formulario de petición; además pide una interfaz glassmorphism.
+- Publicado en `d3fb739b4d268be11e53250162ac4a63234f3c7a`: al abrir Equipo, si no existe ningún trabajo cuyo origen sea Consejo, se lanza una única lectura acotada con los proyectos activos. Su resumen y responsable aparecen en Consejo de dirección; la propuesta completa se abre desde Trabajos y sigue requiriendo aprobación antes de crear tareas. Las lecturas siguientes requieren “Actualizar lectura”, evitando gasto en cada visita.
+- Diseño: panel raíz, Consejo, red de agentes, lista de integrantes y área de trabajo pasan a cristal translúcido con desenfoque, bordes sutiles y sombras suaves compatibles con el dock espacial. Redes Sociales queda bien rotulado también en estados y trabajos.
+- Validación: build y 25 pruebas correctas; lint sin errores, con cinco avisos preexistentes fuera del área Agentes. Detector de diseño sin bloqueos; avisos sólo de tokens de radio/color ya presentes. Pendiente prueba autenticada y la definición de objetivos/indicadores persistentes para que el Consejo pueda evaluar metas como cinco clientes mensuales.

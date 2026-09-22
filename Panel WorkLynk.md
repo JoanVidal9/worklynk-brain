@@ -40,6 +40,8 @@ La pantalla Agentes empieza por **Equipo** y separa la lectura de los integrante
 
 Si Agentes devuelve “sin confirmar” junto con “La Function no ha reconocido esta sesión”, el problema está antes de consultar capacidades: `ba19252` renueva el token próximo a caducar y explica que `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` de Netlify deben ser del mismo proyecto que `VITE_SUPABASE_URL`. La migración SQL no corrige una discrepancia de credenciales.
 
+Desde `d3fb739`, Equipo incorpora un **Consejo de dirección**. La primera vez que el área está activa y no existe una lectura previa, envía una única petición acotada al CEO con los proyectos activos para dejar iniciativas verificables; la propuesta queda en Trabajos y requiere la misma revisión antes de crear tareas. Las actualizaciones posteriores requieren el botón explícito. No es todavía un scheduler autónomo: no analiza sin abrir el panel ni dispone de métricas de clientes, facturación o campañas que no estén en el contexto autorizado. La superficie de Agentes utiliza cristal translúcido, blur y contrastes de la Consola de Mando.
+
 ## Identidad visual
 
 El entorno de administración extiende la identidad ya existente del Command Center: grafito, cristal ahumado, luz blanca y ámbar. Escena oscura con geometría arquitectónica y etiquetas legibles. Las superficies heredadas fuera del shell espacial conservan su sistema anterior de blanco/negro y magenta. No usar verde. Consultar DESIGN.md y el brief espacial del repo para el alcance exacto.
