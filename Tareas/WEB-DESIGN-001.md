@@ -13,3 +13,5 @@
 
 - Revisión externa inicial: tres correcciones aplicadas. Revalidación final del revisor no disponible por cuota; comprobaciones funcionales completadas por Codex.
 
+- 2026-09-22, Claude (relevo explícito de Joan): la imagen de vidrio de la portada (`hero--marca`) se pintaba como banda absoluta con corte duro por la izquierda ("descuadrada"). Se recolocó como elemento en flujo, centrado y entero (object-fit contain + multiply sobre blanco), debajo del titular; ajustadas altura y paddings del hero en escritorio y móvil. Solo cambia la portada: KERN y las demás cabeceras (`hero` normal) intactas; sin tocar textos ni el resto del diseño Apple. Verificado escritorio/móvil sin errores de consola. Publicado en main `3efd6ed`; HTTP 200 con CSS `7a3d80b4d7`.
+

@@ -21,10 +21,9 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 
 ## Web worklynk.es — 2026-09-22
 
-- Corrección publicada: 5b355ac. Joan rechazó el diseño oscuro anterior y los cambios de copy.
-- Todos los textos originales de 7913081 restaurados y protegidos. Diseño blanco/gris perla, tipografía Apple de sistema, Liquid Glass funcional y fondo común en todas las rutas.
-- Validación: 16 comparaciones de texto y 32 recorridos escritorio/móvil correctos. Menú móvil accesible; claro por defecto con elección persistente.
-- Ficha: [WEB-DESIGN-001](Tareas/WEB-DESIGN-001.md). Brain actualizado localmente; no implica sincronización remota.
+- Diseño blanco/gris perla, tipografía Apple de sistema, Liquid Glass funcional y fondo común en todas las rutas (Codex, `5b355ac`). Textos originales de 7913081 restaurados y protegidos. Claro por defecto con elección persistente; menú móvil accesible.
+- Última corrección (Claude, relevo de Joan el 2026-09-22): la imagen de vidrio de la **portada** se veía descuadrada (banda con corte duro por la izquierda). Recolocada como elemento centrado y entero sobre blanco, debajo del titular; solo afecta a la portada (`hero--marca`), KERN y el resto intactos. Publicado en main `3efd6ed`, live en worklynk.es (CSS `7a3d80b4d7`).
+- Ficha: [WEB-DESIGN-001](Tareas/WEB-DESIGN-001.md). Brain actualizado localmente; falta sincronizar el repo brain con GitHub.
 
 ## Coordinación — 2026-09-21
 
