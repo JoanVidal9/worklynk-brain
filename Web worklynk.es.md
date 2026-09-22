@@ -14,9 +14,27 @@ que abrirlo.
   HTML final. Se compila con `python3 build.py` y la salida **sí se
   versiona** en git (Netlify publica tal cual, sin paso de build).
 - Desplegada en Netlify, dominio `worklynk.es` ya conectado.
-- Diseño propio: tipografía Jost autoalojada, interfaz en blanco y negro con
-  el magenta de marca (`#d810ce`) reservado solo al logo, el foco y la
-  selección de texto. Tema oscuro por defecto.
+- Dirección visual «Optical Workspace»: tipografía Jost autoalojada, fondos
+  carbón y blanco mineral, jerarquía editorial amplia y señal verde reservada
+  a conexión, foco y estado. La navegación, menús y controles usan Liquid
+  Glass; el contenido largo permanece sobre superficies sólidas. Tema oscuro
+  por defecto y tema claro persistente.
+- `PRODUCT.md`, `DESIGN.md` y `.impeccable/design.json` contienen la verdad de
+  producto y el sistema visual. No hace falta reconstruirlo desde el chat.
+- La portada usa `assets/images/worklynk-glass-links.png`; KERN y Refórmalo
+  incorporan escenas conceptuales propias. Cada PNG conserva su prompt
+  embebido y un `.prompt.txt` contiguo.
+
+## Última publicación
+
+- Commit `a894bda` en `main`, 2026-09-22.
+- Rediseño Apple-inspired sin copiar una página concreta: tipografía de caja
+  natural, titulares de escala variable, composiciones asimétricas, imágenes a
+  gran formato y vidrio funcional.
+- Generación correcta de 16 páginas; 32 comprobaciones en Chrome entre
+  escritorio y móvil sin errores, desbordamientos ni imágenes rotas.
+- Netlify publica directamente desde el repositorio. El dominio respondió HTTP
+  200 con el nuevo hero tras el push; despliegue confirmado.
 
 ## Contenido — páginas
 
@@ -30,7 +48,8 @@ y las tres legales.
   de alta como autónomo.
 - Foto y párrafo personal de Joan en `/estudio/`.
 - Capturas reales de KERN (hoy son maquetas interactivas).
-- Comparación real antes/después para [[Refórmalo]] (hoy es una ilustración).
+- Comparación real antes/después para [[Refórmalo]] (hoy es una visualización
+  conceptual identificada como tal).
 
 ## Módulos anunciados en la web (para que KERN los tenga en cuenta)
 
