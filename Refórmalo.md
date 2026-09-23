@@ -7,8 +7,11 @@ mayoría de modelos de imagen, que se inventan el espacio: mueven una
 ventana, tiran un tabique...).
 
 > No hay repo local identificado para Refórmalo en `C:\Users\joanv\code`.
-> Si el código vive en otro sitio, decirle a la sesión correspondiente que
-> actualice esta nota con la ruta real.
+> Joan cree que vive solo en GitHub; no está confirmado.
+>
+> Estilo: se queda con el suyo propio (para particulares, más hogareño). No
+> se le aplica el [sistema visual](marca/SISTEMA-VISUAL.md) de la web
+> (decisión de Joan, 2026-09-23).
 
 ## Por qué lo mantienen
 
@@ -18,7 +21,6 @@ controlado, que aguante a mucha gente a la vez.
 
 ## Estado en la web
 
-`/reformalo/` todavía muestra un comparador antes/después **ilustrativo**
-(dos plantas dibujadas, sin fotos reales) — pendiente de sustituir por una
-comparación real generada con la propia herramienta en cuanto Joan suba una
-que quede bien.
+`/reformalo/` enseña una animación ilustrativa del móvil (foto → carga →
+aviso de reforma lista). Pendiente de añadir una comparación real generada
+con la propia herramienta cuando Joan la suba.

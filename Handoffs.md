@@ -40,8 +40,9 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - Pendientes: validar lectura en Claude, publicar documentación cuando corresponda e implementar el coordinador si se desea activación automática.
 - Sin coordinador activo: escribir aquí no despierta agentes ni actualiza otras sesiones automáticamente.
 
-## KERN — 2026-09-21
+## KERN — 2026-09-23
 
-- Joan confirma repositorio y despliegue propios en Netlify.
-- Sin tarea de implementación asignada en esta conversación.
+- Responsable del rediseño visual y de organización: Claude, con Joan (encargo del 2026-09-23). Sin cristal ni vídeos: colores, tipografía y botones del [sistema visual](marca/SISTEMA-VISUAL.md). Empezar por la portada de bienvenida («mucho ruido»).
+- Estado: auditoría hecha, propuesta enviada a Joan; sin cambios en el código todavía. Una sesión de Claude en la nube fusionó ayer/hoy «liquid glass» en el chrome (PR #12 y #13): chocará con la decisión de no usar cristal.
+- Aviso de seguridad pendiente de verificar por Joan: en local, sin iniciar sesión, la portada mostró expedientes que no son de la demo. Comprobar en Supabase que las políticas de `SUPABASE.sql` (solo `authenticated`) están aplicadas y no queda ninguna para `anon`.
 

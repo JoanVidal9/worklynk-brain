@@ -78,3 +78,5 @@ estaba oculto y se seguía cargando en todas las páginas).
 
 Los 6 renders de GetLayers que se usaron para explorar dirección visual.
 Imágenes generadas por IA, no assets finales.
+
+Sistema visual completo (web y aplicaciones) y CSS base reutilizable: [SISTEMA-VISUAL.md](SISTEMA-VISUAL.md).

@@ -2,11 +2,12 @@
 
 El producto insignia de [[Empresa|WORKLYNK]]. Entorno de trabajo técnico que
 convierte el archivo documental de una empresa en expedientes: documentación,
-cálculos y referencias reutilizables, generando memorias técnicas sobre las
-plantillas de Word de cada cliente.
+cálculos y referencias, con el formato corporativo de cada cliente y validación
+técnica en cada fase. Vocabulario en la web: archivo técnico, criterio,
+trazabilidad; nunca «plantilla Word» ni «copiar y pegar» como reclamo.
 
-**En producción de verdad**: una ingeniería industrial española lo usa para
-~20 documentos técnicos al mes. No es un prototipo.
+**En producción de verdad** en una ingeniería industrial española. No es un
+prototipo. (Joan retiró de la web la cifra de documentos al mes.)
 
 > Repo en `C:\Users\joanv\code\worklynk\kern` (GitHub:
 > `JoanVidal9/worklynk-engineeringos`) — ya no está vacío, tiene código real
