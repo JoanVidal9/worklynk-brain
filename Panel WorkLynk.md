@@ -46,6 +46,8 @@ Desde `b044a4f`, la consola de Agentes no se expone antes de verificar la Functi
 
 ## Identidad visual
 
+**2026-09-23 (rama `sede-3d`, sin publicar):** Joan pide los colores de Worklynk. La sede 3D y el volumen de trabajo pasan a gris perla, blanco y tinta, con el lima `#7dff3c` solo para lo activo (brain/marca/SISTEMA-VISUAL.md). Lo que sigue describe la versión azul-negra anterior.
+
 El entorno de administración conserva la escena 3D del Command Center y usa una interfaz espacial azul-negra: cristal frío para el volumen principal, foco hielo, señal violeta secundaria y un lanzador contextual con las siete áreas. En escritorio el lanzador es vertical; en móvil es horizontal y muestra que hay más destinos. Las superficies de datos permanecen más sólidas para sostener la lectura. El portal cliente conserva su sistema anterior de blanco/negro y magenta. No usar verde. Consultar DESIGN.md y el brief espacial del repo para el alcance exacto.
 
 ## Proyectos editables — 2026-09-22

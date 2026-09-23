@@ -71,3 +71,11 @@
   3. Estaciones con cifras reales de Supabase (facturas por cobrar, tareas de hoy, decisiones pendientes). Si un dato no existe, se muestra vacío y no se inventa.
   4. Al entrar en un área, un panel lateral (en iPad, una hoja inferior) que deja ver la escena, en lugar de un panel que la tapa.
 - Pendiente: Joan elige por dónde empezar. Responsable por decidir (Codex tenía el relevo; Joan se lo ha pedido ahora a Claude).
+
+## Sede 3D y colores de marca (Claude, 2026-09-23)
+- Joan pasa el relevo a Claude (Codex sin uso). Rama local `sede-3d` del panel, commit 047a76c. **No subida ni publicada**: falta el OK de Joan.
+- Sede: Joan y el CEO en el centro; ocho especialistas en puestos alrededor, con estado real de la Function (`teamTones` en `src/three/command-center/team.ts`); seis salas en anillo. Agentes = centro (`/agents`).
+- Movimiento: desplazamiento con límite de radio 15 (clic derecho o dos dedos), WASD/flechas, Q/E para girar, doble clic o doble toque en el suelo para viajar. Las etiquetas de cada agente aparecen al acercarse.
+- Colores de Worklynk: gris perla, blanco, tinta, y lima solo para lo activo. Jost autoalojada en `public/fonts`. `projects.css` y `pages/agents.css` pasados a claro.
+- Validado: build, 25 pruebas y oxlint sin errores; preview en escritorio, tableta y móvil; Proyectos con datos de muestra.
+- Pendiente: pasar a claro el resto de pantallas (`console.css` y `command-center.css` tienen colores fijos y bloques para modo oscuro), probar con sesión real, publicar. Siguiente fase: cifras reales en las salas y panel lateral que no tape la escena.
