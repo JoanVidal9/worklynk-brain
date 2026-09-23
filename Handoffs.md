@@ -19,11 +19,15 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - Proyectos ya permite editar nombre, cliente, descripción, estado, presupuesto y fechas; cada tarjeta admite cambio de estado inmediato y acceso al editor. El shell administrativo adopta una interfaz espacial azul-negra con foco hielo, lanzador vertical en escritorio y horizontal con pista de continuidad en móvil, conservando la escena 3D. Validado con build, 25 pruebas, lint sin errores y capturas de escritorio/móvil/editor mediante una ruta DEV de datos locales marcados como muestra. Revisión Impeccable final: `ship`.
 - Siguiente paso: comprobar en Netlify la edición y el cambio de estado con una sesión administradora real. En paralelo siguen pendientes aplicar 011/012 en Supabase y construir la biblioteca persistente de entregas por trabajo; no se debe presentar como disponible.
 
-## Web worklynk.es — 2026-09-22
+## Web worklynk.es — 2026-09-23
 
-- Diseño blanco/gris perla, tipografía Apple de sistema, Liquid Glass funcional y fondo común en todas las rutas (Codex, `5b355ac`). Textos originales de 7913081 restaurados y protegidos. Claro por defecto con elección persistente; menú móvil accesible.
-- Última corrección (Claude, relevo de Joan el 2026-09-22): la imagen de vidrio de la **portada** se veía descuadrada (banda con corte duro por la izquierda). Recolocada como elemento centrado y entero sobre blanco, debajo del titular; solo afecta a la portada (`hero--marca`), KERN y el resto intactos. Publicado en main `3efd6ed`, live en worklynk.es (CSS `7a3d80b4d7`).
-- Ficha: [WEB-DESIGN-001](Tareas/WEB-DESIGN-001.md). Brain actualizado localmente; falta sincronizar el repo brain con GitHub.
+- Responsable: Claude, por encargo de Joan ("déjala lista en esta sesión"). Publicado en main `776994d` + `netlify.toml` corregido; live en worklynk.es (CSS `7ea27e83dc`).
+- v3: logo oficial de Joan vectorizado (`_fuente/logo.py`) en menú, pie, favicon, icono de app v3 y OG. Cada cabecera con su vídeo o imagen de cristal nítido, sin velo (`MEDIOS` en build.py). Portada: hero → manifiesto que se ilumina → escena del eslabón recorrida con el scroll → trabajos → catálogo → proceso → selector → FAQ → cierre con vídeo. Fuera "Webs como esta", la cinta de palabras, cursor, destellos, tilt 3D y el WebGL oculto. Titulares en Jost.
+- `/estudio/` reescrita sin datos personales (Joan no quiere exponerlos). Textos de 7913081 protegidos salvo estos cambios pedidos.
+- Se integraron las ramas `claude/video-y-menus` (otra sesión de Claude); `claude/logo-real` queda superada por el logo nuevo. Las ramas `claude/*` antiguas pueden borrarse.
+- Corregido: `netlify.toml` servía vídeos e imágenes como `text/html` con nosniff.
+- Pendiente de Joan: revisar en su móvil (icono de app: borrar el acceso directo y volver a añadirlo). Siguiente sesión: "otras cosas" que Joan decidirá.
+- Ficha: [WEB-DESIGN-001](Tareas/WEB-DESIGN-001.md).
 
 ## Coordinación — 2026-09-21
 

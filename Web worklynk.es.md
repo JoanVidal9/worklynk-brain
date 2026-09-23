@@ -14,14 +14,13 @@ que abrirlo.
   HTML final. Se compila con `python3 build.py` y la salida **sí se
   versiona** en git (Netlify publica tal cual, sin paso de build).
 - Desplegada en Netlify, dominio `worklynk.es` ya conectado.
-- Dirección vigente: blanco/gris perla, tipografía de sistema estilo Apple, vidrio funcional en navegación, menús y controles; mismo fondo y eslabones claros en todas las cabeceras.
+- Dirección vigente (v3, 2026-09-23): blanco/gris perla, titulares en Jost y texto de sistema, vidrio en navegación y controles; cada cabecera con su vídeo o imagen de cristal nítido; escena de scroll en portada. Logo oficial en `_fuente/logo.py` y en [[marca/MARCA|Marca]].
 - Claro por defecto; elección posterior en wl-theme-light-v2. Textos originales de 7913081 protegidos por instrucción expresa de Joan.
 - Documentación: PRODUCT.md, DESIGN.md y .impeccable/design.json.
 
 ## Última publicación
 
-- 5b355ac en main, 2026-09-22. Sustituye el diseño rechazado a894bda.
-- Textos restaurados; 16 comparaciones de copy y 32 comprobaciones de escritorio/móvil sin fallos.
+- 776994d en main, 2026-09-23 (v3). Sustituye a 5b355ac (Codex) y a las ramas de vídeo de otra sesión de Claude.
 
 ## Contenido — páginas
 
@@ -33,7 +32,6 @@ y las tres legales.
 
 - Datos legales completos (CIF, domicilio) — bloqueado hasta que Joan se dé
   de alta como autónomo.
-- Foto y párrafo personal de Joan en `/estudio/`.
 - Capturas reales de KERN (hoy son maquetas interactivas).
 - Comparación real antes/después para [[Refórmalo]] (hoy es una visualización
   conceptual identificada como tal).
