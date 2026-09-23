@@ -101,7 +101,7 @@ Orden acordado de facto con Joan; se trabaja de arriba abajo y se tacha al publi
 
 Hecho y publicado: sede 3D, desplazamiento PC/iPad, colores de marca, cifras reales en salas, panel lateral / hoja inferior, ficha y «Encargar» por agente, iconos, biblioteca de entregas (013), borradores bajo demanda, perfil de empresa en borradores.
 
-1. **Exportar entregas** a Word con la marca de Worklynk (descargar un borrador aprobado). Sin cambios de prompt.
+1. ~~Exportar entregas a Word con la marca~~ — hecho (ver commit en main).
 2. **Aprender de lo aprobado**: al redactar, el agente recibe sus últimas entregas aprobadas como referencia de estilo y criterio. Cambia prompt → enseñar a Joan.
 3. **Sede viva**: el agente que está redactando se ve trabajando en la sede.
 4. **Limpieza**: quitar la escena 3D antigua sin uso (`CommandCenterCanvas`, `scenes/`, `modules/`, `command-center.css`).
