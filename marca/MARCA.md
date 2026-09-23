@@ -26,14 +26,13 @@ el color de texto de cada tema y los verdes son degradados fijos.
 
 ## Color
 
-Verde de **estatus activo**, ni magenta gaming ni neón lima. En la interfaz
+Verde de **estatus activo**: desde el 2026-09-23 un único lima neón `#7dff3c` para todos los detalles de la web (Joan: "hay demasiados tonos verdes"). Sobre claro nunca como color de texto. En la interfaz
 solo marca foco, estado y acentos puntuales (p. ej. "el enlace"); el resto es
 blanco, gris perla y tinta.
 
 | Rol                   | Claro     | Oscuro    |
 |-----------------------|-----------|-----------|
-| Verde de interfaz     | `#087b40` | `#29dc6e` |
-| Luz de estado activo  | `#7dff3c` con halo | igual |
+| Verde de interfaz (único) | `#7dff3c` lima de estado activo | igual |
 | Conector del logo     | `#c4ff4a → #22c43a` (degradado) | igual |
 | "y" del logotipo      | `#7fae22 → #8fc21f` (degradado) | igual |
 | Fondo                 | `#f5f5f7` | `#171719` |
