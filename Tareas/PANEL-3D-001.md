@@ -79,3 +79,11 @@
 - Colores de Worklynk: gris perla, blanco, tinta, y lima solo para lo activo. Jost autoalojada en `public/fonts`. `projects.css` y `pages/agents.css` pasados a claro.
 - Validado: build, 25 pruebas y oxlint sin errores; preview en escritorio, tableta y móvil; Proyectos con datos de muestra.
 - Pendiente: pasar a claro el resto de pantallas (`console.css` y `command-center.css` tienen colores fijos y bloques para modo oscuro), probar con sesión real, publicar. Siguiente fase: cifras reales en las salas y panel lateral que no tape la escena.
+
+## Publicado en main (Claude, 2026-09-23, con OK de Joan)
+- 047a76c: sede 3D, desplazamiento y colores de marca (antes rama `sede-3d`).
+- 63b33b8: Resumen y bloques heredados (pulso, cobros, nixie, monoespaciada, auras magenta) en blanco, tinta y lima dentro del volumen de trabajo. Ruta DEV vacía `/preview/command-center/resumen/fixture`, sin datos.
+- fccba87: salas con cifras reales (`hooks/useRoomSignals.ts`): clientes, proyectos activos, € por cobrar y vencidas, tareas abiertas y vencidas, y Actividad «En tiempo real» si Realtime conecta. Solo en la vista general; si una consulta falla, la sala no muestra nada.
+- aa2674f: el área abierta ya no tapa la sede: panel lateral derecho en escritorio (máx. 840 px, 62vw) y hoja inferior en tableta y móvil; la cámara encuadra la sala en la zona visible.
+- Validado: build, 25 pruebas y lint; preview en 1280, iPad 768×1024 y móvil 375.
+- Pendiente: probar con sesión real (estado de agentes, cifras, Clientes, Facturas, Tareas, Actividad y Agentes en claro). `command-center.css` es de la escena antigua y no se usa. URL de Netlify del panel sin anotar en Brain.
