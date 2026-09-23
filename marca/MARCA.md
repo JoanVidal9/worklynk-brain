@@ -33,6 +33,7 @@ blanco, gris perla y tinta.
 | Rol                   | Claro     | Oscuro    |
 |-----------------------|-----------|-----------|
 | Verde de interfaz     | `#087b40` | `#29dc6e` |
+| Luz de estado activo  | `#7dff3c` con halo | igual |
 | Conector del logo     | `#c4ff4a → #22c43a` (degradado) | igual |
 | "y" del logotipo      | `#7fae22 → #8fc21f` (degradado) | igual |
 | Fondo                 | `#f5f5f7` | `#171719` |
