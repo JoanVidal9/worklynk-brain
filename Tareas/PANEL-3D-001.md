@@ -108,3 +108,8 @@ Hecho y publicado: sede 3D, desplazamiento PC/iPad, colores de marca, cifras rea
 5. ~~Perfil de empresa al planificar~~ — hecho (6d7edda).
 
 Pendiente de Joan (bloquea la verificación real): migraciones 011, 012 y 013; variables de Netlify también para Edge Functions; una prueba completa de trabajo → borrador → revisión; URL de Netlify del panel. Aplazado por Joan: revisión de seguridad.
+
+## Rediseño de Agentes y 3D (OK general de Joan, 2026-09-23)
+- b888145: Agentes. «¿Qué necesita la empresa?» envía al CEO sin cambiar de pestaña; «Decisiones pendientes» y «Entregas por revisar» arriba; organigrama (CEO + 8 especialistas) con el mismo estado que la sede (`teamTones`), trabajos abiertos, «Ver» y «Encargar»; Consejo compacto; Trabajos filtrables por responsable y apilados si el volumen es estrecho (container query). Ruta DEV `/preview/command-center/agents/equipo` con `pages/agents-sample.ts` rotulado como muestra.
+- 0076cc6: sede con minimapa (`components/Minimap.tsx`; `mapView` y `flyTo` en el store) y línea lima animada del CEO a cada agente trabajando.
+- Ideas siguientes sin empezar: marcador 3D en salas con algo vencido; entrada de cámara al abrir; etiquetas de agentes visibles al estar en Agentes.
