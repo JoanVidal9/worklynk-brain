@@ -61,3 +61,13 @@
 - Interfaz: volumen frontal azul-negro con material translúcido jerárquico, foco hielo y señal violeta; lanzador vertical en escritorio y horizontal con indicación “Más” en móvil. La escena Three.js y sus estaciones continúan visibles alrededor.
 - Accesibilidad: foco visible, movimiento reducido, transparencia reducida y contraste aumentado. La ruta DEV `/preview/command-center/projects/fixture` usa datos locales rotulados como muestra y permite comprobar tarjetas, estados y editor sin consultar Supabase; se excluye de producción.
 - Verificación: `npm run build`, 25 pruebas y lint sin errores; cinco avisos anteriores fuera del cambio. Capturas 1440×1000 y 390×844, editor poblado y revisión Impeccable final `ship`. Validación con sesión administradora real pendiente tras el despliegue.
+
+## Diagnóstico y propuesta de reestructuración (Claude, 2026-09-23)
+- Joan quiere mantener el panel 3D y moverse por él en PC e iPad; los agentes son su equipo y deben ser el centro. Pide revisar el estado y reestructurarlo en lo estético.
+- Diagnóstico: el 3D funciona como vestíbulo. Tiene siete estaciones del mismo peso, órbita y zoom, pero `enablePan={false}` impide desplazarse. Al entrar en un área, la cámara se bloquea y un panel plano tapa la escena. Las estaciones no enseñan estado real (pendientes, aprobaciones) y los agentes son una estación más.
+- Propuesta en este orden:
+  1. Sede: en el centro, Joan y el CEO; alrededor, los agentes como equipo con estado real (trabajando, espera aprobación, sin conexión). Clientes, Proyectos, Facturas y Tareas como salas alrededor.
+  2. Desplazamiento real: desplazamiento con límites; en iPad, un dedo gira, dos dedos desplazan o hacen zoom y doble toque vuela; en PC, WASD o flechas.
+  3. Estaciones con cifras reales de Supabase (facturas por cobrar, tareas de hoy, decisiones pendientes). Si un dato no existe, se muestra vacío y no se inventa.
+  4. Al entrar en un área, un panel lateral (en iPad, una hoja inferior) que deja ver la escena, en lugar de un panel que la tapa.
+- Pendiente: Joan elige por dónde empezar. Responsable por decidir (Codex tenía el relevo; Joan se lo ha pedido ahora a Claude).
