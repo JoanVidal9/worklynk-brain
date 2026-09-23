@@ -26,6 +26,7 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - `/estudio/` reescrita sin datos personales (Joan no quiere exponerlos). Textos de 7913081 protegidos salvo estos cambios pedidos.
 - Se integraron las ramas `claude/video-y-menus` (otra sesión de Claude); `claude/logo-real` queda superada por el logo nuevo. Las ramas `claude/*` antiguas pueden borrarse.
 - Corregido: `netlify.toml` servía vídeos e imágenes como `text/html` con nosniff.
+- Segunda pasada (`d86d39c`): portada con hero partido (titular + CTA + garantías, fluido en bucle de ida y vuelta), fuera el párrafo gigante y la escena del eslabón, «Qué hacemos» con cristal a la izquierda y fondos animados a un lado en trabajos, catálogo y selector («Así trabajamos» sin fondo, por decisión de Joan). Siguiente: repasar página por página.
 - Pendiente de Joan: revisar en su móvil (icono de app: borrar el acceso directo y volver a añadirlo). Siguiente sesión: "otras cosas" que Joan decidirá.
 - Ficha: [WEB-DESIGN-001](Tareas/WEB-DESIGN-001.md).
 
