@@ -94,4 +94,17 @@
 - Pendiente: Joan aplica la 013 en Supabase (después de 011 y 012). Los agentes aún no escriben entregas por sí solos: sus ejecutores solo preparan planes y tareas; conectar su salida a la biblioteca es el siguiente paso de capacidades (toca prompts y Function).
 - fa7e847 publicado en main con OK de Joan (2026-09-23): los especialistas redactan borradores bajo demanda. Edge Function `netlify/edge-functions/agent-draft.ts` (`/api/agent-draft`, streaming; la Function normal corta a 10 s). Prompt en `server/agents/drafting.ts`. Comprueba administrador, AGENTS_ENABLED, ejecutor conectado y un tope de 20 borradores en 24 h; guarda en `agent_deliverables` (necesita la 013). En la pantalla: «Pedir borrador a <agente>» y «Rehacer con mi nota». No cambia los prompts de planificación existentes. 30 pruebas OK.
 - 553335d: en Agentes (vista Equipo), lista «Entregas por revisar» de todos los trabajos (12 más recientes) con acceso directo al trabajo; solo aparece si hay alguna.
-- Rama local `contexto-empresa` (8e70e6a), pendiente del OK de Joan: perfil público de Worklynk (`server/agents/company.ts`: qué hace, oferta, voz, prohibiciones de marca, contacto público) pasado a los borradores. Sin datos personales, clientes con nombre, cifras ni precios. 31 pruebas OK.
+- 8e70e6a publicado con OK de Joan: perfil público de Worklynk (`server/agents/company.ts`: qué hace, oferta, voz, prohibiciones de marca, contacto público) pasado a los borradores. Sin datos personales, clientes con nombre, cifras ni precios. 31 pruebas OK.
+
+## Plan en curso: qué significa «continúa» (Claude, 2026-09-23)
+Orden acordado de facto con Joan; se trabaja de arriba abajo y se tacha al publicar. Todo lo que cambie instrucciones de los agentes se enseña a Joan antes de publicar.
+
+Hecho y publicado: sede 3D, desplazamiento PC/iPad, colores de marca, cifras reales en salas, panel lateral / hoja inferior, ficha y «Encargar» por agente, iconos, biblioteca de entregas (013), borradores bajo demanda, perfil de empresa en borradores.
+
+1. **Exportar entregas** a Word con la marca de Worklynk (descargar un borrador aprobado). Sin cambios de prompt.
+2. **Aprender de lo aprobado**: al redactar, el agente recibe sus últimas entregas aprobadas como referencia de estilo y criterio. Cambia prompt → enseñar a Joan.
+3. **Sede viva**: el agente que está redactando se ve trabajando en la sede.
+4. **Limpieza**: quitar la escena 3D antigua sin uso (`CommandCenterCanvas`, `scenes/`, `modules/`, `command-center.css`).
+5. **Perfil de empresa también al planificar** (CEO y especialistas). Cambia prompt → enseñar a Joan.
+
+Pendiente de Joan (bloquea la verificación real): migraciones 011, 012 y 013; variables de Netlify también para Edge Functions; una prueba completa de trabajo → borrador → revisión; URL de Netlify del panel. Aplazado por Joan: revisión de seguridad.
