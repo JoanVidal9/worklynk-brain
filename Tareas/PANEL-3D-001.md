@@ -87,3 +87,5 @@
 - aa2674f: el área abierta ya no tapa la sede: panel lateral derecho en escritorio (máx. 840 px, 62vw) y hoja inferior en tableta y móvil; la cámara encuadra la sala en la zona visible.
 - Validado: build, 25 pruebas y lint; preview en 1280, iPad 768×1024 y móvil 375.
 - Pendiente: probar con sesión real (estado de agentes, cifras, Clientes, Facturas, Tareas, Actividad y Agentes en claro). `command-center.css` es de la escena antigua y no se usa. URL de Netlify del panel sin anotar en Brain.
+- cd4285d: cada puesto de la sede abre `/agents?agente=<id>` con ese especialista resaltado; los conectados muestran «Encargar», que abre un trabajo con «Para <agente>: » (responsable sugerido; el CEO confirma). Agentes conectados en lima. Las demás pantallas (Clientes, Facturas, Tareas, Actividad) usan utilidades zinc que `worklynk-2026.css` ya traduce a los colores del volumen de trabajo.
+- Siguiente propuesto: biblioteca de entregas por trabajo (necesita migración y RLS que Joan aplica en Supabase) y aplicar 011/012 para que los especialistas figuren conectados.
