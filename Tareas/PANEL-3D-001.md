@@ -102,9 +102,9 @@ Orden acordado de facto con Joan; se trabaja de arriba abajo y se tacha al publi
 Hecho y publicado: sede 3D, desplazamiento PC/iPad, colores de marca, cifras reales en salas, panel lateral / hoja inferior, ficha y «Encargar» por agente, iconos, biblioteca de entregas (013), borradores bajo demanda, perfil de empresa en borradores.
 
 1. ~~Exportar entregas a Word con la marca~~ — hecho (2b03d4b).
-2. **Aprender de lo aprobado**: preparado en rama `aprender` (6d7edda), pendiente del OK de Joan (2 últimas entregas aprobadas del mismo agente, solo como referencia de estilo).
+2. ~~Aprender de lo aprobado~~ — hecho (6d7edda, OK de Joan).
 3. ~~Sede viva~~ — hecho (bb4836b).
 4. ~~Limpieza de la escena antigua~~ — hecho (63e4e09, 668 líneas menos).
-5. **Perfil de empresa al planificar**: en la misma rama `aprender`, pendiente del OK de Joan.
+5. ~~Perfil de empresa al planificar~~ — hecho (6d7edda).
 
 Pendiente de Joan (bloquea la verificación real): migraciones 011, 012 y 013; variables de Netlify también para Edge Functions; una prueba completa de trabajo → borrador → revisión; URL de Netlify del panel. Aplazado por Joan: revisión de seguridad.
