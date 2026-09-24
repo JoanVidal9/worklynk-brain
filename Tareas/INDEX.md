@@ -5,7 +5,7 @@ Actualizar esta tabla junto con la ficha de cada tarea. No cargar todas las fich
 | ID | Proyecto | Responsable | Estado | Siguiente paso |
 | --- | --- | --- | --- | --- |
 | [COORD-001](COORD-001.md) | Brain | Codex; validación posterior con Claude | Preparación local terminada; integración sin validar | Validar lectura de Claude cuando tenga cuota; concretar coordinador |
-| [PANEL-3D-001](PANEL-3D-001.md) | Panel | Claude | Sede 3D, cifras reales y panel lateral publicados | Probar con sesión real |
+| [PANEL-3D-001](PANEL-3D-001.md) | Panel | Claude | Maqueta 3D y menús nuevos publicados (2026-09-25) | Feedback de Joan y prueba con sesión real |
 | [WEB-DESIGN-001](WEB-DESIGN-001.md) | Web worklynk.es | Claude (v3, 2026-09-23) | v3 publicada en `776994d`: logo oficial, vídeos, escena de scroll, Estudio nuevo | Revisión de Joan en móvil; sustituir material conceptual cuando haya real |
 
 Joan autorizó el relevo del trabajo de navegación del Panel a Codex. Cualquier otro trabajo suspendido de Claude sigue pendiente de documentar.
