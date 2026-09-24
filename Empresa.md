@@ -39,6 +39,7 @@ en cualquier negocio.
   española, ~20 documentos técnicos al mes.
 - Joan **todavía no está dado de alta como autónomo** — por eso no hay
   firma personal (nombre completo, foto) visible en `/estudio/` todavía.
+- 2026-09-24: Joan facturará como persona física (autónomo), no como SL. El emisor legal es él; WORKLYNK va como nombre comercial y logo. Sus datos fiscales viven en el código privado del Panel (`src/lib/invoice.ts`), no en Brain. Alta en Hacienda y RETA sin confirmar.
 - Dominio `worklynk.es` contratado, conectado a Netlify y ya en producción
   (DNS gestionado en Hostinger, donde también están los tres buzones de
   correo — no tocar los registros MX/TXT de ahí sin cuidado).
