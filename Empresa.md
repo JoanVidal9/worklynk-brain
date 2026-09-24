@@ -19,8 +19,8 @@ en cualquier negocio.
   en producción con un cliente) + [[Refórmalo]] (producto propio publicado)
   + la propia [[Web worklynk.es|web]] son la prueba, no una lista de
   servicios en abstracto.
-- **Sin precios publicados** en ningún sitio — ni en la web ni en el
-  [[Panel WorkLynk|panel]] interno.
+- **Sin precios publicados**: ni en la web ni en ningún sitio público. Desde el 2026-09-24,
+  Joan tiene su tarifa interna en el [[Panel WorkLynk|panel]] (pestaña Tarifas), solo para él.
 - **La IA no se vende como reclamo** — solo aparece donde de verdad la hay
   (Refórmalo, el caso de estudio de KERN).
 - **Trato de tú**, cordial, cero lenguaje corporativo hueco. Las
