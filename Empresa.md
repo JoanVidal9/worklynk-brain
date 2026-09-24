@@ -40,6 +40,7 @@ en cualquier negocio.
 - Joan **todavía no está dado de alta como autónomo** — por eso no hay
   firma personal (nombre completo, foto) visible en `/estudio/` todavía.
 - 2026-09-24: Joan facturará como persona física (autónomo), no como SL. El emisor legal es él; WORKLYNK va como nombre comercial y logo. Sus datos fiscales viven en el código privado del Panel (`src/lib/invoice.ts`), no en Brain. Alta en Hacienda y RETA sin confirmar: el 2026-09-24 Joan ya había visitado al gestor, pero seguía sin darse de alta. La retención (7 o 15 %) está pendiente de que Joan la confirme.
+- Gestoría (2026-09-24), opción 1, persona física: pluriactividad (nómina más autónomo). Actividad de servicios informáticos, IVA e IRPF trimestrales, tarifa plana de 80 €/mes el primer y el segundo año (sin ella, unos 300 €) y cuenta bancaria propia para la actividad. Opción 2, SL: 100 % de Joan y administrador, capital social de 1.000 €, 5 nombres al Registro Mercantil Central, notaría, NIF y nómina desde la SL. Impuesto de sociedades del 25 %; el 15 % de los primeros años queda por aclarar. Coste de montarla: entre 1.500 y 1.700 €.
 - Dominio `worklynk.es` contratado, conectado a Netlify y ya en producción
   (DNS gestionado en Hostinger, donde también están los tres buzones de
   correo — no tocar los registros MX/TXT de ahí sin cuidado).
