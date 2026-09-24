@@ -48,7 +48,15 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - Pendientes: validar lectura en Claude, publicar documentación cuando corresponda e implementar el coordinador si se desea activación automática.
 - Sin coordinador activo: escribir aquí no despierta agentes ni actualiza otras sesiones automáticamente.
 
+## Bases — 2026-09-25
+
+- Claude creó `C:\Users\joanv\code\worklynk\bases` (5a7f544, git local; falta el repositorio de GitHub, que crea Joan). Contiene el alta de KERN, la web estática y la base de software a medida. Detalle en [Bases](Bases.md).
+- **Nota para Codex:** la carpeta `bases/` es de Claude; no la toques sin relevo de Joan. Lo que sí es tuyo cuando Joan lo asigne: `bases/kern/multicliente.md` lista lo que hay que sacar a configuración en el repositorio de KERN (URL y clave de Supabase, `CONTEXTO_EMPRESA`, empresas por defecto y valores de reserva de las Functions) para instalar KERN a un segundo cliente sin tocar código. Claude no ha modificado el repositorio de KERN.
+- Pendiente de Joan: ejecutar `bases/kern/verificar-esquema.sql` (solo lectura) en el proyecto de ECOIMSA y pasar el resultado, para confirmar `esquema.sql`.
+
 ## KERN — 2026-09-23
+
+- 2026-09-25: ECOIMSA sigue en el plan gratuito de Supabase hasta que pague (el gratuito pausa el proyecto tras una semana sin uso y no hace copias). Hay que pasarlo a Pro al cobrar y, mientras tanto, descargar cada semana una copia con el botón «Descargar copia» de KERN. Usará KERN a diario desde la semana del 2026-09-28.
 
 - Responsable del rediseño visual y de organización: Claude, con Joan (encargo del 2026-09-23). Sin cristal ni vídeos: colores, tipografía y botones del [sistema visual](marca/SISTEMA-VISUAL.md). Empezar por la portada de bienvenida («mucho ruido»).
 - Estado: primera pasada hecha en la rama local `rediseno-visual` (commit 6649dee, sin publicar; `main` intacta). Logo de la flor sustituido por los eslabones de WORKLYNK, colores del sistema (gris perla; el oscuro se queda en grafito neutro porque Joan lo usa), sin cristal ni auroras, Jost en titulares, menú Expedientes · Asistente · Reuniones · Cálculos (historial dentro de Expedientes, ajustes en el menú del usuario), portada con accesos, una sola lista y las seis fases al lado. El cristal que metió la sesión en la nube (PR #12 y #13) queda anulado por tokens.

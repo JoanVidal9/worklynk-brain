@@ -19,6 +19,7 @@ No recuperes chats antiguos ni leas todo el baúl por defecto. Si falta informac
 | panel | JoanVidal9/PANEL-DE-CONTROL-WORKLYNK | [Panel](Panel%20WorkLynk.md) | Netlify |
 | web | JoanVidal9/WORKLYNK | [Web](Web%20worklynk.es.md) | Netlify |
 | kern | JoanVidal9/worklynk-engineeringos | [KERN](KERN.md) | Netlify, confirmado por Joan |
+| bases | Pendiente de crear en GitHub (local con git) | [Bases](Bases.md) | Ninguno |
 
 `C:\Users\joanv\code\PANEL WORKLYNK` no es el repositorio canónico del Panel. No mover ni fusionar repositorios. Conservar las rutas de notas existentes y `marca/` para no romper enlaces.
 
