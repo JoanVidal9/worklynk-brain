@@ -28,6 +28,21 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - 2026-09-25, Claude (Joan: «métele caña al 3D… mejórame todos los menús»): panel 902a957, 9036f7e, e4d6c45 y e19291f, publicados en main. La sede es ahora una maqueta de arquitecto: pabellones con mobiliario por área, atrio del CEO, arbolado, figuras a escala, luz de estudio, sombras suaves y oclusión ambiental (`src/three/command-center/scene/`, nueva dependencia `@react-three/postprocessing`). Menús: barra superior con Sede y las siete áreas, «Ir a…» (Ctrl K) y menú de cuenta; el volumen perdió la columna de iconos y los títulos repetidos. Hay un solo sistema de componentes (`src/ui.css`, `src/components/ui.tsx`) aplicado a Facturación, Clientes, Proyectos, Tareas, Actividad y Resumen, este último reescrito. La pantalla de acceso pasa a claro, con la maqueta girando detrás. DESIGN.md y PRODUCT.md están al día. Verificado con build, 67 pruebas y capturas de escritorio, tableta y móvil en rutas de muestra. Sin sesión real: no se han visto con datos las fichas de factura y presupuesto ni el portal de clientes (Tareas sí, con la muestra de `/preview/command-center/tasks/muestra`).
 - Siguiente paso: comprobar en Netlify la edición y el cambio de estado con una sesión administradora real. En paralelo siguen pendientes aplicar 011/012 en Supabase y construir la biblioteca persistente de entregas por trabajo; no se debe presentar como disponible.
 
+## Seguridad — 2026-09-25 (Claude)
+
+- Publicado:
+  - web eb5dd4a: CSP, teclado y encabezados.
+  - panel efb095a: cabeceras, CSP en observación.
+  - KERN fabf5fd: XSS en nombres corregido, SRI en CDN, cabeceras.
+- **Recordatorio pendiente de Joan (se lo tiene que recordar la próxima sesión):**
+  1. Supabase de KERN y del panel → Authentication → desactivar «Allow new users to sign up»; usuarios solo a mano o por invitación. Motivo: en KERN la política es «cualquier usuario con sesión lee y escribe todo», así que un registro abierto expone todos los documentos.
+  2. Confirmar que `kern/SUPABASE.sql` (RLS) está aplicado en el proyecto de ECOIMSA, con `bases/kern/verificar-esquema.sql` (solo lectura). Joan pidió que se le vuelva a explicar RLS.
+- Encontrado, sin arreglar aún:
+  - el proxy de IA de KERN acepta cualquier modelo y cualquier tamaño de cualquier usuario con sesión;
+  - el acceso al panel deja crear cuentas;
+  - CSP completa del panel y de KERN pendiente de una sesión real.
+- Sin revisar: Refórmalo (falta el repo). No se ha hecho ninguna prueba activa contra sistemas en producción.
+
 ## Web worklynk.es — 2026-09-23
 
 - 2026-09-25, Claude: web 7204896 publicada en main. Cambios aprobados uno a uno por Joan:
