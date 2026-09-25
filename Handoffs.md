@@ -35,7 +35,7 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
   - panel efb095a: cabeceras, CSP en observación.
   - KERN fabf5fd: XSS en nombres corregido, SRI en CDN, cabeceras.
 - **Recordatorio pendiente de Joan (se lo tiene que recordar la próxima sesión):**
-  1. Supabase de KERN y del panel → Authentication → desactivar «Allow new users to sign up»; usuarios solo a mano o por invitación. Motivo: en KERN la política es «cualquier usuario con sesión lee y escribe todo», así que un registro abierto expone todos los documentos.
+  1. (Joan dice que ya lo desactivó el 2026-09-25; sin comprobar) Supabase de KERN y del panel → Authentication → desactivar «Allow new users to sign up»; usuarios solo a mano o por invitación. Motivo: en KERN la política es «cualquier usuario con sesión lee y escribe todo», así que un registro abierto expone todos los documentos.
   2. Confirmar que `kern/SUPABASE.sql` (RLS) está aplicado en el proyecto de ECOIMSA, con `bases/kern/verificar-esquema.sql` (solo lectura). Joan pidió que se le vuelva a explicar RLS.
 - Encontrado, sin arreglar aún:
   - el proxy de IA de KERN acepta cualquier modelo y cualquier tamaño de cualquier usuario con sesión;
