@@ -6,8 +6,7 @@ cálculos y referencias, con el formato corporativo de cada cliente y validació
 técnica en cada fase. Vocabulario en la web: archivo técnico, criterio,
 trazabilidad; nunca «plantilla Word» ni «copiar y pegar» como reclamo.
 
-**En producción de verdad** en una ingeniería industrial española. No es un
-prototipo. (Joan retiró de la web la cifra de documentos al mes.)
+**Producto propio probado y funcional, sin vender** (Joan, 2026-09-25): en pruebas con una ingeniería, no aceptado ni implantado. En público nunca «en producción», «cliente» ni «caso de cliente». La cifra de 70–80 % menos de redacción sale de pruebas propias y se puede publicar. En la web se enseña con la maqueta, no con capturas.
 
 > Repo en `C:\Users\joanv\code\worklynk\kern` (GitHub:
 > `JoanVidal9/worklynk-engineeringos`) — ya no está vacío, tiene código real

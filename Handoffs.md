@@ -30,6 +30,17 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 
 ## Web worklynk.es — 2026-09-23
 
+- 2026-09-25, Claude: web 7204896 publicada en main. Cambios aprobados uno a uno por Joan:
+  - KERN pasa a «producto propio, probado», sin «en producción» ni cliente.
+  - El caso de ingeniería pasa a «Cómo está hecho KERN», con la misma URL.
+  - «Trato técnico directo, sin intermediarios» sustituye a «hablas con quien lo construye».
+  - Se quitó la pregunta de proyectos pequeños.
+  - Las tarjetas Herramientas internas y Automatización cuentan el resultado.
+  - Los ejemplos van agrupados por proceso.
+  - Se comprobó en escritorio y móvil que ningún texto se monta.
+  - Pendiente de Joan: una línea de entrada para los 4 grupos nuevos de Ejemplos.
+  - Reglas en `web/CLAUDE.md`.
+
 - Responsable: Claude, por encargo de Joan ("déjala lista en esta sesión"). Publicado en main `776994d` + `netlify.toml` corregido; live en worklynk.es (CSS `7ea27e83dc`).
 - v3: logo oficial de Joan vectorizado (`_fuente/logo.py`) en menú, pie, favicon, icono de app v3 y OG. Cada cabecera con su vídeo o imagen de cristal nítido, sin velo (`MEDIOS` en build.py). Portada: hero → manifiesto que se ilumina → escena del eslabón recorrida con el scroll → trabajos → catálogo → proceso → selector → FAQ → cierre con vídeo. Fuera "Webs como esta", la cinta de palabras, cursor, destellos, tilt 3D y el WebGL oculto. Titulares en Jost.
 - `/estudio/` reescrita sin datos personales (Joan no quiere exponerlos). Textos de 7913081 protegidos salvo estos cambios pedidos.

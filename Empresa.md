@@ -15,14 +15,14 @@ en cualquier negocio.
 
 ## Cómo se posiciona
 
-- **Capacidad amplia, prueba concreta**: [[KERN]] (herramienta interna real,
-  en producción con un cliente) + [[Refórmalo]] (producto propio publicado)
+- **Capacidad amplia, prueba concreta**: [[KERN]] (producto propio probado,
+  sin vender todavía) + [[Refórmalo]] (producto propio publicado)
   + la propia [[Web worklynk.es|web]] son la prueba, no una lista de
   servicios en abstracto.
 - **Sin precios publicados**: ni en la web ni en ningún sitio público. Desde el 2026-09-24,
   Joan tiene su tarifa interna en el [[Panel WorkLynk|panel]] (pestaña Tarifas), solo para él.
 - **La IA no se vende como reclamo** — solo aparece donde de verdad la hay
-  (Refórmalo, el caso de estudio de KERN).
+  (Refórmalo, «Cómo está hecho KERN»).
 - **Trato de tú**, cordial, cero lenguaje corporativo hueco. Las
   convenciones exactas de tono y diseño viven en `CLAUDE.md` del repo de la
   web — ver [[Web worklynk.es]].
@@ -35,8 +35,8 @@ en cualquier negocio.
 
 ## Estado del negocio (15 sept 2026)
 
-- Un cliente real en producción con KERN: una ingeniería industrial
-  española, ~20 documentos técnicos al mes.
+- KERN: en pruebas con una ingeniería industrial, **no vendido ni aceptado** (corregido por Joan el 2026-09-25).
+- Imagen pública de empresa, no de freelance: nada de «una persona», «empresa pequeña» ni «hecho a mano» (Joan, 2026-09-25).
 - Joan **todavía no está dado de alta como autónomo** — por eso no hay
   firma personal (nombre completo, foto) visible en `/estudio/` todavía.
 - 2026-09-24: Joan facturará como persona física (autónomo), no como SL. El emisor legal es él; WORKLYNK va como nombre comercial y logo. Sus datos fiscales viven en el código privado del Panel (`src/lib/invoice.ts`), no en Brain. Alta en Hacienda y RETA sin confirmar: el 2026-09-24 Joan ya había visitado al gestor, pero seguía sin darse de alta. La retención (7 o 15 %) está pendiente de que Joan la confirme.
