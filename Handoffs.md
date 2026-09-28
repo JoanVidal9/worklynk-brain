@@ -36,7 +36,7 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
   - KERN fabf5fd: XSS en nombres corregido, SRI en CDN, cabeceras.
 - **Recordatorio pendiente de Joan (se lo tiene que recordar la próxima sesión):**
   1. (Joan dice que ya lo desactivó el 2026-09-25; sin comprobar) Supabase de KERN y del panel → Authentication → desactivar «Allow new users to sign up»; usuarios solo a mano o por invitación. Motivo: en KERN la política es «cualquier usuario con sesión lee y escribe todo», así que un registro abierto expone todos los documentos.
-  2. RLS de KERN (ECOIMSA), comprobado el 2026-09-28: RLS activado en las 8 tablas, pero quedaban políticas antiguas para el rol `public` con `true` (lectura, alta, edición y borrado sin sesión). Se le pasó a Joan el SQL para borrarlas y dejar solo `equipo_autenticado` (añadido también a `contexto_corporativo`). Pendiente: que Joan lo ejecute y repita la comprobación.
+  2. RLS de KERN (ECOIMSA), comprobado el 2026-09-28: RLS activado en las 8 tablas, pero quedaban políticas antiguas para el rol `public` con `true` (lectura, alta, edición y borrado sin sesión). Joan ejecutó el arreglo el mismo día: quedan solo 8 políticas `equipo_autenticado` (authenticated) y RLS activado en las 8 tablas. Comprobado. Opcional: revisar Logs → API por accesos anónimos anteriores.
 - Encontrado, sin arreglar aún:
   - el proxy de IA de KERN acepta cualquier modelo y cualquier tamaño de cualquier usuario con sesión;
   - el acceso al panel deja crear cuentas;
