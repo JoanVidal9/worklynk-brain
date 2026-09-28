@@ -30,6 +30,8 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 
 ## KERN-BASE: producto limpio — 2026-09-28 (Claude)
 
+- Arreglo en producción (main 2ad05dd, también en `optimizacion` y KERN-BASE): el asistente daba «servicio no disponible» porque Netlify corta con 502 la Edge Function que tarda más de 40 s en empezar a responder (pliego largo + modelo que razona). `/api/ia` responde ya y mantiene viva la conexión; los errores muestran el motivo real. Probado con OpenAI simulado; falta la confirmación del amigo de Joan.
+
 - Repositorio `JoanVidal9/KERN-BASE` (local `worklynk/kern-base`, 4904cbc), historial nuevo sin rastro de ningún cliente. Es el producto que se vende; el repositorio antiguo sigue siendo la instalación de ECOIMSA.
 - Incluye: configuración por variables de Netlify, `supabase/esquema.sql` completo con RLS y roles en la base de datos (`kern_rol`: lectura no escribe, solo admin cambia roles; probado en PGlite), pantalla de Equipo que no deja quedarse sin administrador y README con la instalación y la lista de ajustes de seguridad de Supabase.
 - El esquema se reconstruyó leyendo el código: confirmar con `bases/kern/verificar-esquema.sql` en el Supabase de ECOIMSA (solo estructura).
