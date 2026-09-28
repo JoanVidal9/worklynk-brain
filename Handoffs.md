@@ -28,6 +28,11 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - 2026-09-25, Claude (Joan: «métele caña al 3D… mejórame todos los menús»): panel 902a957, 9036f7e, e4d6c45 y e19291f, publicados en main. La sede es ahora una maqueta de arquitecto: pabellones con mobiliario por área, atrio del CEO, arbolado, figuras a escala, luz de estudio, sombras suaves y oclusión ambiental (`src/three/command-center/scene/`, nueva dependencia `@react-three/postprocessing`). Menús: barra superior con Sede y las siete áreas, «Ir a…» (Ctrl K) y menú de cuenta; el volumen perdió la columna de iconos y los títulos repetidos. Hay un solo sistema de componentes (`src/ui.css`, `src/components/ui.tsx`) aplicado a Facturación, Clientes, Proyectos, Tareas, Actividad y Resumen, este último reescrito. La pantalla de acceso pasa a claro, con la maqueta girando detrás. DESIGN.md y PRODUCT.md están al día. Verificado con build, 67 pruebas y capturas de escritorio, tableta y móvil en rutas de muestra. Sin sesión real: no se han visto con datos las fichas de factura y presupuesto ni el portal de clientes (Tareas sí, con la muestra de `/preview/command-center/tasks/muestra`).
 - Siguiente paso: comprobar en Netlify la edición y el cambio de estado con una sesión administradora real. En paralelo siguen pendientes aplicar 011/012 en Supabase y construir la biblioteca persistente de entregas por trabajo; no se debe presentar como disponible.
 
+## KERN para Tradebe — 2026-09-28 (Claude)
+
+- El departamento de IT de Tradebe (grupo de ECOIMSA) abrió un formulario de solicitud de herramientas de IA (Microsoft Forms: ubicación y rol, herramienta y plan, plazo de 2–3, 6 o 12 meses, necesidad y valor esperado). Un compañero de Joan pedirá KERN por esa vía.
+- Condición: nada que haga referencia a ECOIMSA. Se prepara la tarde del 2026-09-28. El compañero sigue probando KERN esta semana: no romper la instancia actual.
+
 ## Seguridad — 2026-09-25 (Claude)
 
 - Publicado:
@@ -38,10 +43,10 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
   1. (Joan dice que ya lo desactivó el 2026-09-25; sin comprobar) Supabase de KERN y del panel → Authentication → desactivar «Allow new users to sign up»; usuarios solo a mano o por invitación. Motivo: en KERN la política es «cualquier usuario con sesión lee y escribe todo», así que un registro abierto expone todos los documentos.
   2. RLS de KERN (ECOIMSA), comprobado el 2026-09-28: RLS activado en las 8 tablas, pero quedaban políticas antiguas para el rol `public` con `true` (lectura, alta, edición y borrado sin sesión). Joan ejecutó el arreglo el mismo día: quedan solo 8 políticas `equipo_autenticado` (authenticated) y RLS activado en las 8 tablas. Comprobado. Opcional: revisar Logs → API por accesos anónimos anteriores.
 - Encontrado, sin arreglar aún:
-  - el proxy de IA de KERN acepta cualquier modelo y cualquier tamaño de cualquier usuario con sesión;
-  - el acceso al panel deja crear cuentas;
+  - el proxy de IA de KERN acepta cualquier modelo y cualquier tamaño de cualquier usuario con sesión (Joan decidió dejarlo así el 2026-09-28);
   - CSP completa del panel y de KERN pendiente de una sesión real.
-- Sin revisar: Refórmalo (falta el repo). No se ha hecho ninguna prueba activa contra sistemas en producción.
+- 2026-09-28: panel 056d477 quita el registro de la pantalla de acceso; web a2aecac pone al día cookies, privacidad, línea del formulario y enlaces del aviso legal. Siguen en hueco los datos del titular (nombre o razón social, NIF, domicilio) hasta que Joan se dé de alta; revisión por asesor pendiente, ya no visible en la web.
+- Sin revisar: Refórmalo (falta el repo; Joan lo aplaza). No se ha hecho ninguna prueba activa contra sistemas en producción.
 
 ## Web worklynk.es — 2026-09-23
 
