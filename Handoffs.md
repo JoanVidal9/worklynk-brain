@@ -35,6 +35,7 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - Repositorio `JoanVidal9/KERN-BASE` (local `worklynk/kern-base`, 4904cbc), historial nuevo sin rastro de ningún cliente. Es el producto que se vende; el repositorio antiguo sigue siendo la instalación de ECOIMSA.
 - Incluye: configuración por variables de Netlify, `supabase/esquema.sql` completo con RLS y roles en la base de datos (`kern_rol`: lectura no escribe, solo admin cambia roles; probado en PGlite), pantalla de Equipo que no deja quedarse sin administrador y README con la instalación y la lista de ajustes de seguridad de Supabase.
 - El esquema se reconstruyó leyendo el código: confirmar con `bases/kern/verificar-esquema.sql` en el Supabase de ECOIMSA (solo estructura).
+- 2026-09-28: **demo instalada desde cero y funcionando** (https://kern-demo-worklynk.netlify.app, Supabase `kern-demo` en plan gratuito en la organización de Joan, OpenAI con proyecto `kern-demo` y tope de gasto). Estado del sistema todo en verde, Joan es administrador. KERN-BASE acepta la clave publicable nueva de Supabase (`sb_publishable_…`), y `SECRETS_SCAN_OMIT_KEYS` excluye la URL y esa clave del escaneo de Netlify. El día 3 (cuando Joan pueda pagar): organización Supabase `WORKLYNK KERN` en Pro y trasladar `kern-demo`.
 - **Pendiente para repasar con Joan en casa:**
   1. Joan: crear el Supabase y el Netlify de la demo siguiendo el README de KERN-BASE.
   2. Joan: ejecutar `verificar-esquema.sql` en el Supabase actual y pasar el resultado.

@@ -3,7 +3,7 @@
 - Actualizado: 2026-09-28, Claude (ficha creada para Codex por encargo de Joan).
 - Proyecto y ruta: Panel, `C:\Users\joanv\code\worklynk\panel` (Vite + React + TypeScript, Supabase, Netlify).
 - Responsable: **Codex**. Claude no toca el repositorio del panel mientras esta ficha esté en curso.
-- Estado: pendiente.
+- Estado: en curso (2026-09-28, Codex). Archivos asignados: cuotas, cobros e instalaciones en panel; migración 021, pruebas y documentación.
 
 ## Objetivo
 
@@ -36,3 +36,4 @@ Preparar el panel para vender KERN a varios clientes sin perder de vista el dine
 - La migración 015 (fiscal) sigue pendiente de aplicar según `Handoffs.md`. Revisar su estado antes de numerar la nueva y avisar a Joan si bloquea.
 - Nada de secretos en el código, en la base de datos del panel ni en Brain.
 - Al cerrar: actualizar esta ficha, `INDEX.md` y una entrada en `Handoffs.md`.
+
