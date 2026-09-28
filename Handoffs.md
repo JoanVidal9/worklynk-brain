@@ -28,6 +28,21 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 - 2026-09-25, Claude (Joan: «métele caña al 3D… mejórame todos los menús»): panel 902a957, 9036f7e, e4d6c45 y e19291f, publicados en main. La sede es ahora una maqueta de arquitecto: pabellones con mobiliario por área, atrio del CEO, arbolado, figuras a escala, luz de estudio, sombras suaves y oclusión ambiental (`src/three/command-center/scene/`, nueva dependencia `@react-three/postprocessing`). Menús: barra superior con Sede y las siete áreas, «Ir a…» (Ctrl K) y menú de cuenta; el volumen perdió la columna de iconos y los títulos repetidos. Hay un solo sistema de componentes (`src/ui.css`, `src/components/ui.tsx`) aplicado a Facturación, Clientes, Proyectos, Tareas, Actividad y Resumen, este último reescrito. La pantalla de acceso pasa a claro, con la maqueta girando detrás. DESIGN.md y PRODUCT.md están al día. Verificado con build, 67 pruebas y capturas de escritorio, tableta y móvil en rutas de muestra. Sin sesión real: no se han visto con datos las fichas de factura y presupuesto ni el portal de clientes (Tareas sí, con la muestra de `/preview/command-center/tasks/muestra`).
 - Siguiente paso: comprobar en Netlify la edición y el cambio de estado con una sesión administradora real. En paralelo siguen pendientes aplicar 011/012 en Supabase y construir la biblioteca persistente de entregas por trabajo; no se debe presentar como disponible.
 
+## KERN-BASE: producto limpio — 2026-09-28 (Claude)
+
+- Repositorio `JoanVidal9/KERN-BASE` (local `worklynk/kern-base`, 4904cbc), historial nuevo sin rastro de ningún cliente. Es el producto que se vende; el repositorio antiguo sigue siendo la instalación de ECOIMSA.
+- Incluye: configuración por variables de Netlify, `supabase/esquema.sql` completo con RLS y roles en la base de datos (`kern_rol`: lectura no escribe, solo admin cambia roles; probado en PGlite), pantalla de Equipo que no deja quedarse sin administrador y README con la instalación y la lista de ajustes de seguridad de Supabase.
+- El esquema se reconstruyó leyendo el código: confirmar con `bases/kern/verificar-esquema.sql` en el Supabase de ECOIMSA (solo estructura).
+- **Pendiente para repasar con Joan en casa:**
+  1. Joan: crear el Supabase y el Netlify de la demo siguiendo el README de KERN-BASE.
+  2. Joan: ejecutar `verificar-esquema.sql` en el Supabase actual y pasar el resultado.
+  3. Claude, después de la primera sesión real en la demo: pasar la CSP de observación a bloqueo.
+  4. Decisiones de Joan: librerías dentro de KERN en vez de unpkg y cdnjs; doble factor al entrar; límite de modelos y tamaño en la IA (antes dijo que no); inicio de sesión con Microsoft.
+  5. Pasar las correcciones de seguridad (fabf5fd) a `main` de ECOIMSA; Joan no ha respondido.
+  6. Qué ayuda del Estado es (si es Kit Digital o Kit Consulting, el proveedor tiene que ser agente digitalizador).
+  7. Alta de autónomo → datos del titular en la web; borradores de contrato de licencia, encargo de tratamiento (DPA) y condiciones del servicio.
+  8. Material para IT de Tradebe en `bases/kern/solicitud-it.md`: el amigo de Joan rellena sus horas; completar el plazo de borrado de datos y el DPA.
+
 ## KERN para Tradebe — 2026-09-28 (Claude)
 
 - El departamento de IT de Tradebe (grupo de ECOIMSA) abrió un formulario de solicitud de herramientas de IA (Microsoft Forms: ubicación y rol, herramienta y plan, plazo de 2–3, 6 o 12 meses, necesidad y valor esperado). Un amigo de Joan que trabaja allí pedirá KERN por esa vía (Joan no trabaja en ECOIMSA ni en Tradebe).
