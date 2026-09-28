@@ -30,8 +30,8 @@ Conservar solo el último resumen por proyecto. El detalle de tareas vive en [Ta
 
 ## KERN para Tradebe — 2026-09-28 (Claude)
 
-- El departamento de IT de Tradebe (grupo de ECOIMSA) abrió un formulario de solicitud de herramientas de IA (Microsoft Forms: ubicación y rol, herramienta y plan, plazo de 2–3, 6 o 12 meses, necesidad y valor esperado). Un compañero de Joan pedirá KERN por esa vía.
-- Condición: nada que haga referencia a ECOIMSA. Se prepara la tarde del 2026-09-28. El compañero sigue probando KERN esta semana: no romper la instancia actual.
+- El departamento de IT de Tradebe (grupo de ECOIMSA) abrió un formulario de solicitud de herramientas de IA (Microsoft Forms: ubicación y rol, herramienta y plan, plazo de 2–3, 6 o 12 meses, necesidad y valor esperado). Un amigo de Joan que trabaja allí pedirá KERN por esa vía (Joan no trabaja en ECOIMSA ni en Tradebe).
+- Condición: nada que haga referencia a ECOIMSA. Se prepara la tarde del 2026-09-28. El amigo sigue probando KERN esta semana: no romper la instancia actual.
 - Hecho (Claude, 2026-09-28): rama `base` de KERN (3668baf), sin datos de ningún cliente. Supabase por variables de entorno (`scripts/config.js` → `js/00-config.js`), sin contexto de empresa de serie, demo ficticia, Functions sin valores de reserva. `main` (ECOIMSA) sin tocar. Material para IT en `bases/kern/solicitud-it.md`: respuestas en inglés con huecos, hoja de seguridad y pasos de la instalación de demostración. Falta que Joan cree el Supabase y el Netlify de la demo.
 - Aviso: las correcciones de seguridad de KERN (fabf5fd) están en `optimizacion` y `base`, no en `main`. Si `base` se fusiona algún día en `main`, antes hay que poner `SUPABASE_URL` y `SUPABASE_ANON_KEY` en el Netlify de ECOIMSA y guardar sus datos de empresa en Ajustes, porque ya no van en el código.
 
