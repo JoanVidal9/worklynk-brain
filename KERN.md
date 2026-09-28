@@ -1,5 +1,7 @@
 # KERN
 
+> Código del producto: repositorio `JoanVidal9/KERN-BASE` (local `worklynk/kern-base`), limpio de cualquier cliente; su README explica cómo se instala. El repositorio antiguo (`worklynk-engineeringos`, local `worklynk/kern`) es la instalación de ECOIMSA.
+
 El producto insignia de [[Empresa|WORKLYNK]]. Entorno de trabajo técnico que
 convierte el archivo documental de una empresa en expedientes: documentación,
 cálculos y referencias, con el formato corporativo de cada cliente y validación
